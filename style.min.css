@@ -1458,22 +1458,24 @@ input.gform_button:hover{background-color:#313841;box-shadow:none}
 .hero img{width:100%}
 .hero img{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all ease 10s;transition:all ease 10s}
 .hero img:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
-.hero .prop-search{width:100%;background-color:rgba(0,0,0,0.6);padding:40px 0;color:#fff;position:relative}
-@media screen and (min-width:900px){.hero .prop-search{position:absolute;bottom:0;left:0}
-}.hero .prop-search h2{text-align:center;width:100%;color:#fff;font-size:40px}
-.hero .prop-search form.homesearch{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding:0 10px}
-@media screen and (min-width:900px){.hero .prop-search form.homesearch{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;padding:0}
-}.hero .prop-search form.homesearch .block{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
-@media screen and (min-width:900px){.hero .prop-search form.homesearch .block{-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto}
-}.hero .prop-search form.homesearch .home-btn-search{padding:30px 0;background-color:#e31d1a;color:#fff;box-shadow:none;border:0;text-transform:uppercase;border-radius:0;width:100%;-webkit-transition:all ease .3s;transition:all ease .3s}
-.hero .prop-search form.homesearch .home-btn-search:hover{box-shadow:none;background-color:#5d8db5}
-@media screen and (min-width:900px){.hero .prop-search form.homesearch .home-btn-search{width:auto;padding:30px}
-}.hero .prop-search form.homesearch .searchlabel{width:100%;margin:0 0 5px 0}
-.hero .prop-search form.homesearch select{width:100%;border:1px solid #fff;background-color:rgba(255,255,255,0.8);padding:20px;color:#000;border-radius:0;display:inline-block;width:100%;cursor:pointer;padding:10px 15px;outline:0;border-radius:0;appearance:none;-webkit-appearance:none;-moz-appearance:none}
-@media screen and (min-width:600px){.hero .prop-search form.homesearch select{width:100%}
-}@media screen and (min-width:900px){.hero .prop-search form.homesearch select{width:90%}
-}@media screen and (min-width:1200px){.hero .prop-search form.homesearch select{width:100%}
-}.hero .prop-search form.homesearch option{padding:20px}
+.propsearch-page{width:100%;position:relative;float:left;background-color:rgba(0,0,0,0.6);padding:40px 0;color:#fff;position:relative}
+@media screen and (min-width:900px){.propsearch-page{padding:10px}
+}.prop-search{width:100%;background-color:rgba(0,0,0,0.6);padding:40px 0;color:#fff;position:relative}
+@media screen and (min-width:900px){.prop-search{position:absolute;bottom:0;left:0}
+}.prop-search h2,.propsearch-page h2{text-align:center;width:100%;color:#fff;font-size:40px}
+.prop-search form.homesearch,.propsearch-page form.homesearch{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding:0 10px}
+@media screen and (min-width:900px){.prop-search form.homesearch,.propsearch-page form.homesearch{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;padding:0}
+}.prop-search form.homesearch .block,.propsearch-page form.homesearch .block{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
+@media screen and (min-width:900px){.prop-search form.homesearch .block,.propsearch-page form.homesearch .block{-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto}
+}.prop-search form.homesearch .home-btn-search,.propsearch-page form.homesearch .home-btn-search{padding:30px 0;background-color:#e31d1a;color:#fff;box-shadow:none;border:0;text-transform:uppercase;border-radius:0;width:100%;-webkit-transition:all ease .3s;transition:all ease .3s}
+.prop-search form.homesearch .home-btn-search:hover,.propsearch-page form.homesearch .home-btn-search:hover{box-shadow:none;background-color:#5d8db5}
+@media screen and (min-width:900px){.prop-search form.homesearch .home-btn-search,.propsearch-page form.homesearch .home-btn-search{width:auto;padding:30px}
+}.prop-search form.homesearch .searchlabel,.propsearch-page form.homesearch .searchlabel{width:100%;margin:0 0 5px 0}
+.prop-search form.homesearch select,.propsearch-page form.homesearch select{width:100%;border:1px solid #fff;background-color:rgba(255,255,255,0.8);padding:20px;color:#000;border-radius:0;display:inline-block;width:100%;cursor:pointer;padding:10px 15px;outline:0;border-radius:0;appearance:none;-webkit-appearance:none;-moz-appearance:none}
+@media screen and (min-width:600px){.prop-search form.homesearch select,.propsearch-page form.homesearch select{width:100%}
+}@media screen and (min-width:900px){.prop-search form.homesearch select,.propsearch-page form.homesearch select{width:90%}
+}@media screen and (min-width:1200px){.prop-search form.homesearch select,.propsearch-page form.homesearch select{width:100%}
+}.prop-search form.homesearch option,.propsearch-page form.homesearch option{padding:20px}
 h2.tagline{width:100%;float:left;position:relative;text-align:center}
 @media screen and (min-width:600px){h2.tagline{position:absolute;top:10%;left:0;color:#fff;font-size:40px;text-shadow:1px 1px 2px #969696}
 }@media screen and (min-width:900px){h2.tagline{top:15%}

@@ -30,6 +30,10 @@ get_header(); ?>
 
 				<?php endwhile; // End of the loop.
 				?>
+				
+					
+				
+				
 
 				<section class="home-featured-listings common">
 					<div class="wrapper">
@@ -37,6 +41,10 @@ get_header(); ?>
 						<?php echo do_shortcode('[idx mylistings="1"]'); ?>
 					</div>
 				</section>
+
+				<div class="propsearch-page">
+						<?php get_template_part('inc/home-property-search'); ?>
+					</div>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->

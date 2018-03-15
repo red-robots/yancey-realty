@@ -49,101 +49,121 @@
 		}
 	}
 	
-	.prop-search {
+
+}
+.propsearch-page {
+	width: 100%;
+	position: relative;
+	float: left;
+	background-color: rgba(#000, .6);
+	padding: 40px 0;
+	color: #fff;
+	position: relative;
+	@media screen and (min-width: $midwidth) {
+		padding: 10px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.prop-search {
+	width: 100%;
+	background-color: rgba(#000, .6);
+	padding: 40px 0;
+	color: #fff;
+	position: relative;
+	@media screen and (min-width: $midwidth) {
+		position: absolute;
+		bottom: 0%;
+		left: 0%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+
+}
+.prop-search, .propsearch-page  {
+	
+	h2 {
+		text-align: center;
 		width: 100%;
-		background-color: rgba(#000, .6);
-		padding: 40px 0;
 		color: #fff;
-		position: relative;
+		font-size: 40px;
+	}
+	form.homesearch {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 0 10px;
+
 		@media screen and (min-width: $midwidth) {
-			position: absolute;
-			bottom: 0%;
-			left: 0%;
+			flex-wrap: nowrap;
+			padding: 0;
 		}
 		@media screen and (min-width: $deskwidth) {
 			
 		}
-		h2 {
-			text-align: center;
-			width: 100%;
-			color: #fff;
-			font-size: 40px;
-		}
-		form.homesearch {
-			display: flex;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			align-items: center;
-			padding: 0 10px;
-
+		.block {
+			flex-basis: 100%;
 			@media screen and (min-width: $midwidth) {
-				flex-wrap: nowrap;
-				padding: 0;
+				flex-basis: auto;
 			}
 			@media screen and (min-width: $deskwidth) {
 				
 			}
-			.block {
-				flex-basis: 100%;
-				@media screen and (min-width: $midwidth) {
-					flex-basis: auto;
-				}
-				@media screen and (min-width: $deskwidth) {
-					
-				}
-			}
-			.home-btn-search {
-				padding:  30px 0;
-				background-color: $color-red;
-				color: #fff;
+		}
+		.home-btn-search {
+			padding:  30px 0;
+			background-color: $color-red;
+			color: #fff;
+			box-shadow: none;
+			border: 0;
+			text-transform: uppercase;
+			border-radius: 0;
+			width: 100%;
+			@include transition(all ease .3s);
+			&:hover {
 				box-shadow: none;
-				border: 0;
-				text-transform: uppercase;
-				border-radius: 0;
-				width: 100%;
-				@include transition(all ease .3s);
-				&:hover {
-					box-shadow: none;
-					background-color: $color-blue;
-				}
-				@media screen and (min-width: $midwidth) {
-					width: auto;
-					padding:  30px;
-				}
+				background-color: $color-blue;
 			}
-			.searchlabel {
-				width: 100%;
-				margin: 0 0 5px 0;
+			@media screen and (min-width: $midwidth) {
+				width: auto;
+				padding:  30px;
 			}
-			select {
+		}
+		.searchlabel {
+			width: 100%;
+			margin: 0 0 5px 0;
+		}
+		select {
+			width: 100%;
+			border: 1px solid #fff;
+			background-color: rgba(#fff, .8);
+			padding: 20px;
+			color: #000;
+			border-radius: 0;
+			display: inline-block;
+			width: 100%;
+			cursor: pointer;
+			padding: 10px 15px;
+			outline: 0;
+			border-radius: 0;
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			@media screen and (min-width: $tabwidth) {
 				width: 100%;
-				border: 1px solid #fff;
-				background-color: rgba(#fff, .8);
-				padding: 20px;
-				color: #000;
-				border-radius: 0;
-				display: inline-block;
+			}
+			@media screen and (min-width: $midwidth) {
+				width: 90%;
+			}
+			@media screen and (min-width: $deskwidth) {
 				width: 100%;
-				cursor: pointer;
-				padding: 10px 15px;
-				outline: 0;
-				border-radius: 0;
-				appearance: none;
-				-webkit-appearance: none;
-				-moz-appearance: none;
-				@media screen and (min-width: $tabwidth) {
-					width: 100%;
-				}
-				@media screen and (min-width: $midwidth) {
-					width: 90%;
-				}
-				@media screen and (min-width: $deskwidth) {
-					width: 100%;
-				}
 			}
-			option {
-				padding: 20px;
-			}
+		}
+		option {
+			padding: 20px;
 		}
 	}
 }
