@@ -19,7 +19,7 @@ get_header(); ?>
 
 
 	<div class="hero">
-		<img src="<?php bloginfo('template_url'); ?>/images/charlotte.png" alt="">
+		<img src="<?php bloginfo('template_url'); ?>/images/charlotte.jpg" alt="">
 
 		<div class="prop-search">
 			
