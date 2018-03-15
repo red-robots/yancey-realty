@@ -21,13 +21,17 @@ get_header(); ?>
 	<div class="hero">
 		<img src="<?php bloginfo('template_url'); ?>/images/charlotte.jpg" alt="">
 
-		<div class="prop-search">
-			
-		</div>
-
 		<h2 class="tagline">
 			<?php bloginfo('description'); ?>
 		</h2>
+
+		<div class="prop-search">
+			<?php 
+			get_template_part('inc/home-property-search');
+			//if ( is_active_sidebar( 'sidebar-search' ) ) {dynamic_sidebar( 'sidebar-search' );} ?>
+		</div>
+
+		
 
 	</div>
 
