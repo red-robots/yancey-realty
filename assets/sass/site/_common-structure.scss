@@ -169,6 +169,20 @@ header#masthead {
 		background-color: rgba($color-light-black, 1);
 	}
 }
+article.page {
+	width: 90%;
+	margin: 0 auto;
+	h1 {
+		width: 100%;
+		text-align: center;
+	}
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 60%;
+	}
+}
 footer.site-footer {
 	background-color: rgba($color-light-black, 1);
 	width: 100%;

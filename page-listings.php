@@ -1,11 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * Template Name: Listings
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -35,6 +30,13 @@ get_header(); ?>
 
 				<?php endwhile; // End of the loop.
 				?>
+
+				<section class="home-featured-listings common">
+					<div class="wrapper">
+						<h2>Featured Listings</h2>
+						<?php echo do_shortcode('[idx mylistings="1"]'); ?>
+					</div>
+				</section>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->

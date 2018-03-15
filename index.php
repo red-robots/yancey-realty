@@ -31,13 +31,20 @@ get_header(); ?>
 
 	</div>
 
-	<section class="grey-bg">
-	<section class="agents-home">
-	<div class="wrapper">
-		<h2>Our Agents</h2>
-		<?php get_template_part('template-parts/agent-cards'); ?>
-	</div>
+	<section class="grey-bg common">
+		<section class="agents-home">
+			<div class="wrapper">
+				<h2>Our Agents</h2>
+				<?php get_template_part('template-parts/agent-cards'); ?>
+			</div>
+		</section>
 	</section>
+
+	<section class="home-featured-listings common">
+		<div class="wrapper">
+			<h2>Featured Listings</h2>
+			<?php echo do_shortcode('[idx mylistings="1"]'); ?>
+		</div>
 	</section>
 
 	

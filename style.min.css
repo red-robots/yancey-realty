@@ -1433,7 +1433,10 @@ header#masthead{background-color:#1a212b;padding:20px 0;float:left;width:100%}
 .logo a,h1.logo a{width:280px;display:block;-webkit-transition:all ease .4s;transition:all ease .4s;padding:10px}
 @media screen and (min-width:1200px){.logo a,h1.logo a{width:300px}
 }.logo a:hover,h1.logo a:hover{background-color:#313841}
-footer.site-footer{background-color:#313841;width:100%;clear:both;overflow:hidden;padding:20px 0}
+article.page{width:90%;margin:0 auto}
+article.page h1{width:100%;text-align:center}
+@media screen and (min-width:1200px){article.page{width:60%}
+}footer.site-footer{background-color:#313841;width:100%;clear:both;overflow:hidden;padding:20px 0}
 .center{text-align:center}
 section.social{width:200px;margin:0 auto;display:inline-block;text-align:center}
 section.social ul.footer-social{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;list-style:none;margin:20px 0;padding:10px 0}
@@ -1460,10 +1463,11 @@ input.gform_button:hover{background-color:#313841;box-shadow:none}
 @media screen and (min-width:600px){h2.tagline{position:absolute;top:20%;left:0;color:#fff;font-size:40px;text-shadow:1px 1px 2px #969696}
 }section.agents-home{text-align:center;padding:50px 0}
 section.agents{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}
-.agent{width:90%;margin:10px auto;background-color:white;padding:5%;text-align:center;-webkit-transition:all ease .4s;transition:all ease .4s}
+.agent{width:90%;margin:10px auto;background-color:white;padding:5%;text-align:center;-webkit-transition:all ease .4s;transition:all ease .4s;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
 .agent:hover{box-shadow:-1px 2px 15px 1px rgba(0,0,0,0.35)}
-@media screen and (min-width:600px){.agent{width:30%}
-}.agent .agent-photo{width:200px;border-radius:50%;overflow:hidden}
+@media screen and (min-width:600px){.agent{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%}
+}@media screen and (min-width:1200px){.agent{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
+}.agent .agent-photo{width:200px;border-radius:50%;margin:0 auto;overflow:hidden}
 .agent .agent-photo img{width:100%}
 .agent .agent-phone,.agent .agent-email{width:100%;margin:5px 0;color:#313841}
 .agent .agent-phone a,.agent .agent-email a{color:#313841;text-decoration:none}
@@ -1495,6 +1499,17 @@ article.post .readmore a{color:#fff}
 article.post:hover{box-shadow:-1px 2px 15px 1px rgba(0,0,0,0.35)}
 .cat-links{font-size:10px;padding:5px 0;border-top:1px solid #ccc;border-bottom:1px solid #ccc}
 .cat-links a{color:#e31d1a}
+section.home-featured-listings{width:100%;float:left;background-color:#313841;text-align:center;padding:40px 0}
+section.home-featured-listings h2{color:#fff}
+@media screen and (min-width:600px){section.home-featured-listings #idx{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}
+}section.home-featured-listings #idx .idxprop{background-color:#fff;border:1px solid #eee;margin-bottom:30px}
+@media screen and (min-width:600px){section.home-featured-listings #idx .idxprop{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
+}section.home-featured-listings #idx .idxprop .idxphoto2{width:100%;margin:0 0 20px 0;height:auto}
+section.home-featured-listings #idx .idxprop .idxphoto2 a{width:100%;display:block}
+section.home-featured-listings #idx .idxprop .idxphoto2 a img{width:100%;max-width:100%}
+section.home-featured-listings .info-5{width:50%;margin:20px auto}
+section.home-featured-listings .info-5 a{display:block;background-color:#313841;color:#fff;-webkit-transition:all ease .4s;transition:all ease .4s;border:1px solid #fff;padding:10px 20px}
+section.home-featured-listings .info-5 a:hover{color:#313841;border:1px solid #313841;background-color:#fff}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
