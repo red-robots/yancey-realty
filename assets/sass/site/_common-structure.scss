@@ -1,3 +1,9 @@
+// Davis Farrell
+.container {
+	clear: both;
+}
+// /Davis Farrell
+
 * { -webkit-hyphens: none; }
 div {
 
@@ -235,6 +241,7 @@ section.social {
 	}
 	.col {
 		width: 100%;
+		font-size: 16px;
 		@media screen and (min-width: $tabwidth) {
 			width: auto;
 			text-align: left;

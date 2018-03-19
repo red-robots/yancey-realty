@@ -89,10 +89,12 @@
 		text-transform: uppercase;
 		font-family: $font-heading;
 		font-weight: 300;
+		font-size: 16px;
 		width: 100%;
 		@media screen and (min-width: $tabwidth) {
 			border-left: 1px solid $color-light-black;
 			line-height: 3;
+			font-size: 16px;
 			width: auto;
 			// padding: 0 20px;
 			&:first-of-type {
@@ -100,7 +102,7 @@
 			}
 		}
 		@media screen and (min-width: $deskwidth) {
-			// padding: 0 30px;
+			font-size: 16px;
 		}
 
 		&:hover > a,
