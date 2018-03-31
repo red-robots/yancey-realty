@@ -447,3 +447,43 @@ section.home-featured-listings {
 
 
 }
+.center {text-align: center;}
+section.resources {
+	width: 100%;
+	padding: 40px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	@media screen and (min-width: $deskwidth) {
+
+	}
+	.col {
+		flex-basis: 100%;
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 50%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			flex-basis: 30%;
+		}
+	}
+	.resource-link {
+		a {
+			display: block;
+			background-color: $color-light-black;
+			color: #fff;
+			@include transition(all ease .4s);
+			border: 1px solid #fff;
+			padding: 10px 20px;
+
+			&:hover {
+				color: $color-light-black;
+				border: 1px solid $color-light-black;
+				background-color: #fff;
+			}
+		}
+	}
+}

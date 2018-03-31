@@ -69,7 +69,15 @@ $phone = get_field('main_phone', 'option');
 				<div class="col">
 					&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?> 
 				</div>
+				
 			</div><!-- .site-info -->
+
+			<?php $name = get_bloginfo('name'); ?>
+				<div class="creds">
+					<a href="<?php bloginfo('url'); ?>/sitemap">sitemap</a> | © <?php echo date('Y').' '.$name; ?> | site by <a href="https://bellaworksweb.com" target="_blank">BW</a>
+				</div>
+
+
 		</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

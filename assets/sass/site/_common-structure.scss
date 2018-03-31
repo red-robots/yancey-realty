@@ -84,6 +84,11 @@ header#masthead {
 	width: 100%;
 	float: left;
 }
+#primary {
+	@media screen and (min-width: $deskwidth) {
+		min-height: 400px;
+	}
+}
 #content-wrap {
 	width: 100%;
 	margin: 50px 0;
@@ -259,5 +264,16 @@ input.gform_button {
 	&:hover {
 		background-color: rgba($color-light-black, 1);
 		box-shadow: none;
+	}
+}
+.creds {
+	width: 100%;
+	padding: 30px 0;
+	font-size: 12px;
+	text-align: center;
+	clear: both;
+	color: #fff;
+	a {
+		color: #fff;
 	}
 }

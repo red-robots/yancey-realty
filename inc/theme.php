@@ -173,3 +173,35 @@ function ac_first_and_last_menu_class($items) {
   return $items;
 }
 add_filter('wp_nav_menu_objects', 'ac_first_and_last_menu_class');
+/*-------------------------------------
+
+
+  Add a custom menu to order
+
+
+---------------------------------------*/
+
+add_action( 'admin_menu', 'my_admin_menu' );
+
+function my_admin_menu() {
+  add_menu_page( 'Agent Storefront', 'Agent Storefront', 'manage_options', 'myplugin/myplugin-admin-page.php', 'storefront_admin_page', 'dashicons-store', 6  );
+}
+function storefront_admin_page(){
+  ?>
+  <div class="wrap">
+    <h2>Storefront Credentials</h2>
+    <div class="welcome-panel">
+      <h3>You can order all your Real Estate collateral by clicking the below link with the following credentials.</h3>
+      <div class="btn">
+        <a class="button button-primary button-hero" target="_blank" href="https://4606--794.rocketquotes.com/franchise">Order Now</a>
+        <h3>Username: franklin@yanceyrealty.com
+        <br>
+        Password: welcome1</h3>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  <?php
+}
