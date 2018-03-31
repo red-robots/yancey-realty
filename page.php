@@ -30,6 +30,13 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 
+					<?php if(is_page('sitemap')) { 
+
+						wp_list_pages();
+					}
+
+						?>
+
 					
 				</article><!-- #post-## -->
 
