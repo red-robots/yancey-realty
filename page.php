@@ -31,8 +31,8 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 
 					<?php if(is_page('sitemap')) { 
-
-						wp_list_pages();
+						$args = array( 'title_li'     => __( '' ) );
+						wp_list_pages($args);
 					}
 
 						?>
