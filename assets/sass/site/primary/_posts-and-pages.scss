@@ -220,6 +220,7 @@ section.agents {
 	}
 	.agent-photo {
 		width: 200px;
+		height: 200px;
 		border-radius: 50%;
 		margin: 0 auto;
 		overflow: hidden;
@@ -239,23 +240,9 @@ section.agents {
 	.agent-email {
 		font-size: 10px;
 	}
-	.more {
-		a {
-			display: block;
-			background-color: $color-light-black;
-			color: #fff;
-			@include transition(all ease .4s);
-			border: 1px solid #fff;
-			padding: 10px 20px;
-
-			&:hover {
-				color: $color-light-black;
-				border: 1px solid $color-light-black;
-				background-color: #fff;
-			}
-		}
-	}
+	
 }
+
 .agent-single {
 	width: 90%;
 	margin: 10px auto;
@@ -487,3 +474,45 @@ section.resources {
 		}
 	}
 }
+.developments {
+	width: 100%;
+	padding: 40px 0;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+
+	}
+	.development-flex {
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	.development {
+		width: 90%;
+		margin: 10px auto;
+		background-color: rgba(#fff, 1);
+		padding: 5%;
+		@include transition(all ease .4s);
+		flex-basis: 100%;
+		&:hover {
+			-webkit-box-shadow: -1px 2px 15px 1px rgba(0,0,0,0.35);
+			-moz-box-shadow: -1px 2px 15px 1px rgba(0,0,0,0.35);
+			box-shadow: -1px 2px 15px 1px rgba(0,0,0,0.35);
+		}
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 45%;
+			margin: auto;
+		}
+		
+	}
+}
+
+
+
+
+

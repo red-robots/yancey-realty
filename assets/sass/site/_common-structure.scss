@@ -38,6 +38,19 @@ a {text-decoration: none;}
 		padding: 0px;
 	}
 }
+.wrapper-nopad {
+	width: 100%;
+	margin: 0px auto;
+	padding: 0 20px;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 90%;
+		padding: 0px;
+	}
+}
 .flexwrap {
 	@media screen and (min-width: $tabwidth) {
 		display: flex;
@@ -60,7 +73,8 @@ a {text-decoration: none;}
 	}
 	.tool-flex {
 		display: flex;
-		justify-content: flex-end;
+		width: 100%;
+		justify-content: space-between;
 	}
 }
 .phonenum {
@@ -86,7 +100,7 @@ header#masthead {
 }
 #primary {
 	@media screen and (min-width: $deskwidth) {
-		min-height: 400px;
+		// min-height: 400px;
 	}
 }
 #content-wrap {
@@ -252,6 +266,9 @@ section.social {
 			text-align: left;
 		}
 	}
+	.foot-add {
+		margin: 0 0 20px 0;
+	}
 }
 input.gform_button {
 	background-color: rgba($color-red, 1);
@@ -276,4 +293,24 @@ input.gform_button {
 	a {
 		color: #fff;
 	}
+}
+.more {
+	text-align: center;
+	a {
+		display: block;
+		background-color: $color-light-black;
+		color: #fff;
+		@include transition(all ease .4s);
+		border: 1px solid #fff;
+		padding: 10px 20px;
+
+		&:hover {
+			color: $color-light-black;
+			border: 1px solid $color-light-black;
+			background-color: #fff;
+		}
+	}
+}
+.button {
+	
 }

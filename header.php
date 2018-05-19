@@ -28,6 +28,13 @@ $zip = get_field('zip', 'option');
 $email = get_field('general_email', 'option');
 $phone = get_field('main_phone', 'option');
 
+$streetT = get_field('street_address_2', 'option');
+$cityT = get_field('city_2', 'option');
+$stateT = get_field('state_2', 'option');
+$zipT = get_field('zip_2', 'option');
+// $email = get_field('general_email', 'option');
+$phoneT = get_field('main_phone_2', 'option');
+
 ?>
 </head>
 
@@ -35,13 +42,16 @@ $phone = get_field('main_phone', 'option');
 <div id="page" class="site">
 
 <div class="toolbar">
-	<div class="wrapper tool-flex">
-		<div class="address">
-			
-		</div>
-		<div class="phonenum">
-		<?php if($street) {echo $street . ' ';} ?>
-					<?php if($city) {echo $city. ', '.$state.' '.$zip.' | '.$phone;} ?>
+	<div class="wrapper-nopad ">
+		<div class="tool-flex">
+			<div class="phonenum">
+			<?php if($street) {echo $street . ' ';} ?>
+						<?php if($city) {echo $city. ', '.$state.' '.$zip.' | '.$phone;} ?>
+			</div>
+			<div class="phonenum">
+			<?php if($streetT) {echo $streetT . ' ';} ?>
+						<?php if($cityT) {echo $cityT. ', '.$stateT.' '.$zipT.' | '.$phoneT;} ?>
+			</div>
 		</div>
 	</div>
 </div>

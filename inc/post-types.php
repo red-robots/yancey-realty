@@ -107,3 +107,28 @@ $labels = array(
   // and here
   
   } // close custom post type
+
+
+/* ##############################################
+  Custom Taxonomies
+*/
+add_action( 'init', 'build_taxonomies', 0 );
+ 
+function build_taxonomies() {
+// cusotm tax
+    register_taxonomy( 'region', 'agent',
+   array( 
+  'hierarchical' => true, // true = acts like categories false = acts like tags
+  'label' => 'Agent Region', 
+  'query_var' => true, 
+  'rewrite' => true ,
+  'show_admin_column' => true,
+  'public' => true,
+  'rewrite' => array( 'slug' => 'region' ),
+  '_builtin' => true
+  ) );
+  
+} // End build taxonomies
+
+
+

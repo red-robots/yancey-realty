@@ -20,6 +20,13 @@ $zip = get_field('zip', 'option');
 $email = get_field('general_email', 'option');
 $phone = get_field('main_phone', 'option');
 
+$streetT = get_field('street_address_2', 'option');
+$cityT = get_field('city_2', 'option');
+$stateT = get_field('state_2', 'option');
+$zipT = get_field('zip_2', 'option');
+// $email = get_field('general_email', 'option');
+$phoneT = get_field('main_phone_2', 'option');
+
 ?>
 
 	</div><!-- #content -->
@@ -60,8 +67,14 @@ $phone = get_field('main_phone', 'option');
 		</section>
 			<div class="site-info">
 				<div class="col">
-					<?php if($street) {echo $street . '<br>';} ?>
-					<?php if($city) {echo $city. ', '.$state.' '.$zip;} ?>
+					<div class="foot-add">
+						<?php if($street) {echo $street . '<br>';} ?>
+						<?php if($city) {echo $city. ', '.$state.' '.$zip;} ?>
+					</div>
+					<div class="foot-add">
+						<?php if($streetT) {echo $streetT . '<br>';} ?>
+						<?php if($cityT) {echo $cityT. ', '.$stateT.' '.$zipT;} ?>
+					</div>
 				</div>
 				<div class="col">
 					
