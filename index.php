@@ -19,7 +19,7 @@ get_header(); ?>
 
 
 	<div class="hero">
-		<img src="<?php bloginfo('template_url'); ?>/images/charlotte.jpg" alt="">
+		<img src="<?php bloginfo('template_url'); ?>/images/carolina-mashup.png" alt="">
 
 		<h2 class="tagline">
 			<?php bloginfo('description'); ?>

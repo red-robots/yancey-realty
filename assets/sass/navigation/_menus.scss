@@ -197,3 +197,71 @@ button.menu-toggle {
 		width: 50%;
 	}
 }
+.b-nav {
+	text-transform: uppercase;
+		font-family: $font-heading;
+		font-weight: 300;
+		font-size: 16px;
+		width: 100%;
+		@media screen and (min-width: $deskwidth) {
+			width: auto;
+		}
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		@media screen and (min-width: $tabwidth) {
+			flex-direction: row;
+			justify-content: center;
+		}
+		@media screen and (min-width: $midwidth) {
+
+		}
+		@media screen and (min-width: $deskwidth) {
+			flex-direction: column;
+			text-align: left;
+			border-left: 2px solid $color-light-black;
+			padding: 0 0 0 10px;
+			width: auto;
+		}
+		
+		
+		
+		
+		
+	}
+	li {
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			width: auto;
+		}
+		
+	}
+	a {
+		// background-color: rgba($color-blue, 1);
+		color: #fff;
+		padding: 5px;
+		display: block;
+		@include transition(all ease .4s);
+		&:hover {
+			background-color: rgba(#fff, 1);
+			color: $color-black;
+		}
+		@media screen and (min-width: $tabwidth) {
+			padding: 5px 15px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			padding: 5px;
+		}
+	}
+}
+
+
+
+
+
+
+

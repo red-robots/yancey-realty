@@ -71,7 +71,7 @@ $phone = get_field('main_phone', 'option');
 			</nav><!-- #site-navigation -->
 
 			<nav class="b-nav">
-				<?php wp_nav_menu( array( 'theme_location' => 'subnav' ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'subnav' ) ); ?>
 			</nav>
 
 	</div><!-- wrapper -->
