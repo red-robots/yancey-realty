@@ -47,7 +47,7 @@ get_header(); ?>
 	<section class="home-featured-listings common">
 		<div class="wrapper">
 			<h2>Featured Listings</h2>
-			<?php echo do_shortcode('[idx mylistings="1"]'); ?>
+			<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-12572" src="//yanceyrealty.idxbroker.com/idx/customshowcasejs.php?widgetid=12572"></script>
 		</div>
 	</section>
 

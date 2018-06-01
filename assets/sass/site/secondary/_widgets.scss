@@ -10,4 +10,18 @@
 		margin: 0 0 30px 0;
 		list-style: none;
 	}
+	&.idxqs {
+		.IDX-quicksearchWrapper {
+			border: none !important;
+			box-shadow: none !important;
+		}
+		form {
+			text-align: center !important;
+			width: 100% !important;
+			>div {
+				display: inline-block !important;
+				
+			}
+		}
+	}
 }
