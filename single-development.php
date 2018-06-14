@@ -12,6 +12,11 @@ $agent = get_field('agent');
 $form_chooser = get_field('form_chooser');
 $floor_plans = get_field('floor_plans');
 $post_object = $agent;
+$street = get_field('street');
+$city = get_field('city');
+$state = get_field('state');
+$zip = get_field('zip');
+$phone_number = get_field('phone_number');
 
 if( $post_object ): 
 
@@ -31,6 +36,7 @@ if( $post_object ):
     	$facebook = get_field('facebook_link');
     	$twitter = get_field('twitter_link');
     	$instagram = get_field('instagram_link');
+    	
 
 endif;
 wp_reset_postdata();
@@ -77,6 +83,8 @@ wp_reset_postdata();
 				<?php }
 
 				?>
+
+				
 				 
 				<div class="entry-meta">
 					<?php //acstarter_posted_on(); ?>
@@ -87,10 +95,16 @@ wp_reset_postdata();
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div><!-- .entry-content --> 
+			<div id="form"></div>
+			<?php 
 
-			<footer class="entry-footer">
-				<?php acstarter_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
+			if( $form_chooser ) { ?>
+				<div class="form" >
+					<?php echo do_shortcode('[gravityform id="'.$form_chooser.'" title="false" description="false"]'); ?>
+				</div>
+			<?php } ?>
+
+			
 		</article><!-- #post-## -->
 
 			<?php the_post_navigation();
@@ -107,54 +121,64 @@ wp_reset_postdata();
  ?>
 	<aside id="secondary" class="widget-area" role="complementary">
 		<div class="widget">
+			<div class="dev-card">
+				<h3><?php the_title(); ?> Details:</h3>
+				<div class="address">
+					<div class="line"><?php echo $street; ?></div>
+					<div class="line"><?php echo $city . ', '.$zip; ?></div>
+					<div class="line"><?php echo $phone_number; ?></div>
+				</div>
+			</div>
+		</div>
+		<div class="widget">
 			<div class="agent">
-    	<div class="agent-photo">
-    		<img src="<?php echo $thumb; ?>" alt="<?php echo $photo['alt']; ?>">
-    	</div>
-    	<h2><?php echo $agent->post_title; ?></h2>
-    	<?php if($phone) { ?>
-    		<div class="agent-phone">
-    			<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
-    		</div>
-    	<?php } ?>
-    	<?php if($email) { ?>
-    		<div class="agent-email">
-    			<a href="mailto:<?php echo $spambot; ?>"><?php echo $spambot; ?></a>
-    		</div>
-    	<?php } ?>
-    	<?php if( $links == 'yes') : ?>
-	    	<ul class="agent-social">
-	    		<?php if($facebook) { ?>
-	    			<li>
-		    			<a target="_blank" href="<?php echo $facebook; ?>">
-		    				<i class="fa fa-facebook" aria-hidden="true"></i>
-		    			</a>
-	    			</li>
-	    		<?php } ?>
-	    		<?php if($linkedin) { ?>
-	    			<li>
-		    			<a target="_blank" href="<?php echo $linkedin; ?>">
-		    				<i class="fa fa-linkedin" aria-hidden="true"></i>
-		    			</a>
-	    			</li>
-	    		<?php } ?>
-	    		<?php if($twitter) { ?>
-	    			<li>
-		    			<a target="_blank" href="<?php echo $twitter; ?>">
-		    				<i class="fa fa-twitter" aria-hidden="true"></i>
-		    			</a>
-	    			</li>
-	    		<?php } ?>
-	    		<?php if($instagram) { ?>
-	    			<li>
-		    			<a target="_blank" href="<?php echo $instagram; ?>">
-		    				<i class="fa fa-instagram" aria-hidden="true"></i>
-		    			</a>
-	    			</li>
-	    		<?php } ?>
-	    	</ul>
-	    <?php endif; ?>
-	    <div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
+		    	<div class="agent-photo">
+		    		<img src="<?php echo $thumb; ?>" alt="<?php echo $photo['alt']; ?>">
+		    	</div>
+		    	<h2><?php echo $agent->post_title; ?></h2>
+		    	<?php if($phone) { ?>
+		    		<div class="agent-phone">
+		    			<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+		    		</div>
+		    	<?php } ?>
+		    	<?php if($email) { ?>
+		    		<div class="agent-email">
+		    			<a href="mailto:<?php echo $spambot; ?>"><?php echo $spambot; ?></a>
+		    		</div>
+		    	<?php } ?>
+		    	<?php if( $links == 'yes') : ?>
+			    	<ul class="agent-social">
+			    		<?php if($facebook) { ?>
+			    			<li>
+				    			<a target="_blank" href="<?php echo $facebook; ?>">
+				    				<i class="fa fa-facebook" aria-hidden="true"></i>
+				    			</a>
+			    			</li>
+			    		<?php } ?>
+			    		<?php if($linkedin) { ?>
+			    			<li>
+				    			<a target="_blank" href="<?php echo $linkedin; ?>">
+				    				<i class="fa fa-linkedin" aria-hidden="true"></i>
+				    			</a>
+			    			</li>
+			    		<?php } ?>
+			    		<?php if($twitter) { ?>
+			    			<li>
+				    			<a target="_blank" href="<?php echo $twitter; ?>">
+				    				<i class="fa fa-twitter" aria-hidden="true"></i>
+				    			</a>
+			    			</li>
+			    		<?php } ?>
+			    		<?php if($instagram) { ?>
+			    			<li>
+				    			<a target="_blank" href="<?php echo $instagram; ?>">
+				    				<i class="fa fa-instagram" aria-hidden="true"></i>
+				    			</a>
+			    			</li>
+			    		<?php } ?>
+			    	</ul>
+			    <?php endif; ?>
+	    	<div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
     </div>
 		</div>
 	</aside>

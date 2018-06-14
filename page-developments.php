@@ -39,6 +39,8 @@ get_header(); ?>
 	$wp_query->query(array(
 	'post_type'=>'development',
 	'posts_per_page' => -1,
+	'orderby' => 'menu_order',
+	'order' => 'ASC',
 	'paged' => $paged,
 ));
 	if ($wp_query->have_posts()) : ?>

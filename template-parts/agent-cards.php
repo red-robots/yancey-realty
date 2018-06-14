@@ -3,6 +3,8 @@
 	$wp_query->query(array(
 	'post_type'=>'agent',
 	'posts_per_page' => -1,
+	'orderby' => 'menu_order',
+	'order' => 'ASC',
 	'paged' => $paged,
 ));
 	if ($wp_query->have_posts()) : ?>

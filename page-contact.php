@@ -12,6 +12,12 @@ $zip = get_field('zip', 'option');
 $email = get_field('general_email', 'option');
 $phone = get_field('main_phone', 'option');
 
+$mstreet = get_field('street_address_2', 'option');
+$mcity = get_field('city_2', 'option');
+$mstate = get_field('state_2', 'option');
+$mzip = get_field('zip_2', 'option');
+$mphone = get_field('main_phone_2', 'option');
+
 ?>
 <div id="content-wrap">
 	<div class="wrapper">
@@ -40,14 +46,25 @@ $phone = get_field('main_phone', 'option');
 
 		<div class="content-area-half-right">
 			<div class="widget">
-				<h2>Address</h2>
+				<h2>Charlotte Address</h2>
 				<?php echo get_bloginfo('name').'<br>'; ?>
 				<?php if($street) {echo $street . '<br>';} ?>
 				<?php if($city) {echo $city. ', '.$state.' '.$zip;} ?>
 			</div>
 			<div class="widget">
-				<h2>Map</h2>
+				<h2>Charlotte Map</h2>
 				<?php the_field('map_embed'); ?>
+			</div>
+			<div class="widget">
+				<h2>Morganton Address</h2>
+				<?php echo get_bloginfo('name').'<br>'; ?>
+				<?php if($mstreet) {echo $mstreet . '<br>';} ?>
+				<?php if($mcity) {echo $mcity. ', '.$mstate.' '.$mzip . '<br>';} ?>
+				<?php if($mphone) {echo $mphone;} ?>
+			</div>
+			<div class="widget">
+				<h2>Morganton Map</h2>
+				<?php the_field('morganton_map_embed'); ?>
 			</div>
 		</div>
 	</div>
