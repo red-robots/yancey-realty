@@ -1570,6 +1570,8 @@ section.resources .resource-link a:hover{color:#313841;border:1px solid #313841;
 @media screen and (min-width:600px){.prop-manage{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 }.prop-manage .link{width:90%;margin:0 auto 30px auto}
 @media screen and (min-width:600px){.prop-manage .link{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
+}.action-buttons{width:100%;padding:20px 0;border-top:1px solid #313841;border-bottom:1px solid #313841}
+@media screen and (min-width:600px){.action-buttons{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}
 }.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

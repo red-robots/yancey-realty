@@ -54,6 +54,7 @@ wp_reset_postdata();
 
     	$form_chooser = get_field('form_chooser');
 		$floor_plans = get_field('floor_plans');
+		$brochure = get_field('brochure');
 
 		// echo '<pre>';
   //   	print_r($form_chooser);
@@ -68,24 +69,29 @@ wp_reset_postdata();
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				<?php 
 
-				if ( has_post_thumbnail() ) { the_post_thumbnail(); } 
+				if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 
-				if( $form_chooser ) { ?>
-					<div class="more">
-						<a href="#form">Contact Now</a>
-					</div>
-				<?php }
+				<div class="action-buttons">
+					<?php if( $form_chooser ) { ?>
+						<div class="more">
+							<a href="#form">Contact Now</a>
+						</div>
+					<?php }
 
-				if( $floor_plans ) { ?>
-					<div class="more">
-						<a href="<?php echo $floor_plans['url']; ?>">Floor Plans</a>
-					</div>
-				<?php }
+					if( $floor_plans ) { ?>
+						<div class="more">
+							<a href="#floor-plans">Floor Plans</a>
+						</div>
+					<?php } 
 
-				?>
-
+					if( $brochure ) { ?>
+						<div class="more">
+							<a target="_blank" href="<?php echo $brochure; ?>">Download Brochure</a>
+						</div>
+					<?php } ?>
+				</div>
 				
-				 
+
 				<div class="entry-meta">
 					<?php //acstarter_posted_on(); ?>
 				</div><!-- .entry-meta -->
@@ -95,11 +101,35 @@ wp_reset_postdata();
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div><!-- .entry-content --> 
+
+			<div id="floor-plans"></div>
+
+			<div class="floorplans">
+				
+			<h2>Floor Plans</h2>
+				<?php 
+
+				$images = get_field('floor_plans');
+
+				if( $images ): ?>
+					<div class="gallery">
+				        <?php foreach( $images as $image ): ?>
+				            <a href="<?php echo $image['url']; ?>" class="gallery">
+			                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+			                </a>
+				        <?php endforeach; ?>
+				    </div>
+				<?php endif; ?>
+			</div>
+			<!-- floor plans -->
+
+
 			<div id="form"></div>
 			<?php 
 
 			if( $form_chooser ) { ?>
 				<div class="form" >
+				<h2>Interested? Contact us Today.</h2>
 					<?php echo do_shortcode('[gravityform id="'.$form_chooser.'" title="false" description="false"]'); ?>
 				</div>
 			<?php } ?>

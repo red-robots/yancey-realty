@@ -535,6 +535,17 @@ section.resources {
 		}
 	}	
 }
+.action-buttons {
+	width: 100%;
+	padding: 20px 0;
+	border-top: 1px solid $color-light-black;
+	border-bottom: 1px solid $color-light-black;
+	@media screen and (min-width: $tabwidth) {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+}
 
 
 
