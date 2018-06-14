@@ -500,8 +500,8 @@ section.resources {
 		}
 	}
 	.development {
-		width: 90%;
-		margin: 10px auto;
+		// width: 90%;
+		// margin: 10px auto;
 		background-color: rgba(#fff, 1);
 		padding: 5%;
 		@include transition(all ease .4s);
@@ -513,7 +513,8 @@ section.resources {
 		}
 		@media screen and (min-width: $tabwidth) {
 			flex-basis: 45%;
-			margin: auto;
+			// margin: auto;
+			// width: auto;
 		}
 		
 	}

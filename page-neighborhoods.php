@@ -42,33 +42,32 @@ get_header(); ?>
 	// 'paged' => $paged,
 ));
 	if ($wp_query->have_posts()) : ?>
-    <?php while ($wp_query->have_posts()) : ?>
-        <section class="developments grey-bg">
-        	<div class="wrapper">
+    
+    <section class="developments grey-bg">
+    	<div class="wrapper">
         	<div class="development-flex">
-        
-    <?php $wp_query->the_post(); 
-    	
-    	$agent = get_field('agent');
-    	$form_chooser = get_field('form_chooser');
-    	$floor_plans = get_field('floor_plans');
+        		<?php while ($wp_query->have_posts()) : $wp_query->the_post();
+			    	
+			    	$agent = get_field('agent');
+			    	$form_chooser = get_field('form_chooser');
+			    	$floor_plans = get_field('floor_plans');
 
-    	// echo '<pre>';
-    	// print_r($agent);
-    	// echo '</pre>';
+			    	// echo '<pre>';
+			    	// print_r($agent);
+			    	// echo '</pre>';
 
-    ?>
+			    ?>
 
-	    <div class="development ">
-	    	<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
-	    		<h2><?php the_title(); ?></h2>
-	    		<?php the_excerpt(); ?>
-	    		<div class="more">
-	    			<a href="<?php the_permalink(); ?>">Go</a>
-	    		</div>
-	    </div>
-		<?php endwhile; ?>
-		</div>
+				    <div class="development ">
+				    	<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+				    		<h2><?php the_title(); ?></h2>
+				    		<?php the_excerpt(); ?>
+				    		<div class="more">
+				    			<a href="<?php the_permalink(); ?>">Go</a>
+				    		</div>
+				    </div>
+			<?php endwhile; ?>
+			</div>
 		</div>
 	</section>
 <?php endif; ?>

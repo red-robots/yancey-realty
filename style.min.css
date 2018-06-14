@@ -1563,9 +1563,9 @@ section.resources .resource-link a:hover{color:#313841;border:1px solid #313841;
 .developments{width:100%;padding:40px 0}
 .developments .development-flex{width:100%}
 @media screen and (min-width:600px){.developments .development-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
-}.developments .development{width:90%;margin:10px auto;background-color:white;padding:5%;-webkit-transition:all ease .4s;transition:all ease .4s;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
+}.developments .development{background-color:white;padding:5%;-webkit-transition:all ease .4s;transition:all ease .4s;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
 .developments .development:hover{box-shadow:-1px 2px 15px 1px rgba(0,0,0,0.35)}
-@media screen and (min-width:600px){.developments .development{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;margin:auto}
+@media screen and (min-width:600px){.developments .development{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%}
 }.prop-manage{width:100%}
 @media screen and (min-width:600px){.prop-manage{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 }.prop-manage .link{width:90%;margin:0 auto 30px auto}
