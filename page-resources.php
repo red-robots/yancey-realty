@@ -8,10 +8,12 @@
  */
 
 get_header(); ?>
+<section class="grey-bg">
 <div id="content-wrap">
 	<div class="wrapper">
 		<div id="primary" class="content-area-full">
 			<main id="main" class="site-main" role="main">
+				
 
 				<?php
 				while ( have_posts() ) : the_post(); ?>
@@ -28,37 +30,65 @@ get_header(); ?>
 					
 				</article><!-- #post-## -->
 
+				<?php endwhile; // End of the loop. ?>
+
 				<section class="resources">
-					<?php if(have_rows('resources')) : ?>
-						<?php while(have_rows('resources')) :the_row(); ?>
-							<div class="col">
-								<h3><?php the_sub_field('section_title'); ?></h3>
+					
+				
 
-								<?php if(have_rows('resource')) : ?>
-									<?php while(have_rows('resource')) :the_row(); 
+				<?php $terms = get_terms( 'resource_type' );
 
-										$title = get_sub_field('resource_title');
-										$link = get_sub_field('resource_link');
+				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 
-									?>
-										<div class="resource-link">
-											<a href="<?php echo $link; ?>"><?php echo $title; ?></a>
-										</div>
-							</div>
-									<?php endwhile; ?>
-								<?php endif; ?>
+					foreach ( $terms as $term ) { ?>
+						<section class="resource-nav">
+						<ul>
+							<li>
+								<a href="<?php echo '#'.$term->slug; ?>"><?php echo $term->name; ?></a>
+							</li>
+						</ul>
+							
+						</section>
+					<?php }
 
-						<?php endwhile; ?>
-					<?php endif; ?>
+				    // $output .= '<ul class="category-list">';
+				    foreach ( $terms as $term ) { ?>
+
+				     
+				        <h3><?php echo $term->name; ?></h3>
+
+				            <?php $args = array(
+				                'post_type'     => 'resource',
+				                'resource_type' => $term->slug,
+				                'posts_per_page' => -1,
+				            );    
+
+				            $the_query = new WP_Query( $args );
+
+				            if ( $the_query->have_posts() ) { ?>
+				                <section class="resources">
+				                <?php while ( $the_query->have_posts() ) {
+				                    $the_query->the_post(); ?>
+				                    <div class="resource-card">
+				                    	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+				                    	<div class="more"><a href="<?php the_permalink(); ?>">More Info</a></div>
+				                    </div>
+				                <?php } ?>
+				                </section>
+				           <?php } 
+				            wp_reset_postdata(); ?>
+				       
+				    <?php } ?>
+				   
+				<?php } ?>
+
 				</section>
-
-				<?php endwhile; // End of the loop.
-				?>
-
+				
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div>
 </div>
+</section>
 <?php
 // get_sidebar();
 get_footer();

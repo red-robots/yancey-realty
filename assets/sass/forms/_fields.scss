@@ -1,3 +1,10 @@
+select {
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;       /* remove default arrow */
+   background-image: url(...);   /* add custom arrow */
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -16,7 +23,7 @@ input[type="color"],
 textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
-	border-radius: 3px;
+	border-radius: 0px;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -49,3 +56,71 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+.IDX-qsLabel, .IDX-qsInput {
+	width: 100%;
+}
+// prop search
+.prop-search {
+	.IDX-quicksearchWrapper {
+		.IDX-quicksearchForm {
+			width: 100%;
+			display: flex !important;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+			align-items: center;
+
+
+			@media screen and (min-width: $midwidth) {
+				flex-wrap: nowrap;
+				.IDX-qsInput {
+					width: 100%;
+				}
+				#IDX-qsCityListLabel-12569,
+				#IDX-qsIdxIDLabel-12569 {
+					display: block;
+				}
+				#IDX-qsIdxIDWrap-12569 {
+					margin-top: 0;
+				}
+				#IDX-qsSubmit-12569 {
+					margin-top: 24px;
+				}
+			}
+			input[type="submit"].IDX-qsInput {
+				padding: 10px 20px;
+				width: 100% !important;
+			}
+			.IDX-qsFieldWrap #IDX-quicksearchForm-12569 .IDX-qsSelectInput select {
+		width: 100% !important;
+	}
+			
+		}
+	}
+
+}
+
+
+
+.IDX-qsFieldWrap {
+	flex-basis: 100%;
+	@media screen and (min-width: $midwidth) {
+		flex-basis: 15%;
+		display: block;
+	}
+}
+select {
+	border-radius: 0px;
+	padding: 0 25px 0 5px;
+	background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 34px;
+   overflow: hidden;
+   background-color: #fff;
+}
+
+
+
+
+
+
+

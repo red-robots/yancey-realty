@@ -8,38 +8,62 @@
  */
 
 get_header(); 
-$agent = get_field('agent');
+//$agents = get_field('agent');
 $form_chooser = get_field('form_chooser');
 $floor_plans = get_field('floor_plans');
-$post_object = $agent;
+$post_objects = get_field('agent');
 $street = get_field('street');
 $city = get_field('city');
 $state = get_field('state');
 $zip = get_field('zip');
 $phone_number = get_field('phone_number');
 
-if( $post_object ): 
 
-	// override $post
-	$post = $post_object;
-	setup_postdata( $post );
 
-		// $agentPic = get_field('picture');
-		$photo = get_field('picture');
-    	$size = 'medium';
-		$thumb = $photo['sizes'][ $size ];
-		$email = get_field('email');
-    	$spambot = antispambot($email);
-    	$phone = get_field('phone');
-    	$bio = get_field('bio');
-    	$linkedin = get_field('linkedin_link');
-    	$facebook = get_field('facebook_link');
-    	$twitter = get_field('twitter_link');
-    	$instagram = get_field('instagram_link');
+
+$args = array(
+	'posts_per_page'   => -1,
+	'orderby'          => 'date',
+	'order'            => 'DESC',
+	'post_type'        => 'page',
+	'post_parent'      => 7, // page ID
+);
+$posts_array = get_posts( $args ); 
+ 
+foreach( $posts_array as $post ) : setup_postdata( $post );
+	
+	$title = get_the_title();
+	echo '<li>'.$title.'<li>';
+ 
+endforeach;
+
+
+echo '<pre>';
+print_r($agents);
+echo '</pre>';
+
+// if( $post_object ): 
+
+// 	// override $post
+// 	$post = $post_object;
+// 	setup_postdata( $post );
+
+// 		// $agentPic = get_field('picture');
+// 		$photo = get_field('picture');
+//     	$size = 'medium';
+// 		$thumb = $photo['sizes'][ $size ];
+// 		$email = get_field('email');
+//     	$spambot = antispambot($email);
+//     	$phone = get_field('phone');
+//     	$bio = get_field('bio');
+//     	$linkedin = get_field('linkedin_link');
+//     	$facebook = get_field('facebook_link');
+//     	$twitter = get_field('twitter_link');
+//     	$instagram = get_field('instagram_link');
     	
 
-endif;
-wp_reset_postdata();
+// endif;
+// wp_reset_postdata();
 
 ?>
 <div id="content-wrap">
@@ -161,11 +185,33 @@ wp_reset_postdata();
 			</div>
 		</div>
 		<div class="widget">
+			<h3>Agents for <?php the_title(); ?></h3>
+		<?php 
+			foreach( $post_objects as $post ): 
+				setup_postdata($post);
+
+				$photo = get_field('picture');
+		    	$size = 'medium';
+				$thumb = $photo['sizes'][ $size ];
+				$email = get_field('email');
+		    	$spambot = antispambot($email);
+		    	$phone = get_field('phone');
+		    	$bio = get_field('bio');
+		    	$linkedin = get_field('linkedin_link');
+		    	$facebook = get_field('facebook_link');
+		    	$twitter = get_field('twitter_link');
+		    	$instagram = get_field('instagram_link');
+
+		    	if( $linkedin || $facebook || $twitter || $instagram ) {
+		    		$links = 'yes';
+		    	} else { $links = 'no'; }
+		?>
+			
 			<div class="agent">
 		    	<div class="agent-photo">
 		    		<img src="<?php echo $thumb; ?>" alt="<?php echo $photo['alt']; ?>">
 		    	</div>
-		    	<h2><?php echo $agent->post_title; ?></h2>
+		    	<h2><?php the_title(); ?></h2>
 		    	<?php if($phone) { ?>
 		    		<div class="agent-phone">
 		    			<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
@@ -209,7 +255,8 @@ wp_reset_postdata();
 			    	</ul>
 			    <?php endif; ?>
 	    	<div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
-    </div>
+    	</div>
+    	<?php endforeach; wp_reset_postdata(); ?>
 		</div>
 	</aside>
 </div>

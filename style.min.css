@@ -1268,14 +1268,27 @@ dt{font-weight:bold}
 dd{margin:0 1.5em 1.5em}
 img{height:auto;max-width:100%}
 table{margin:0 0 1.5em;width:100%}
-button,input[type="button"],input[type="reset"],input[type="submit"]{border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;background:#e6e6e6;box-shadow:inset 0 1px 0 rgba(255,255,255,0.5),inset 0 15px 17px rgba(255,255,255,0.5),inset 0 -5px 12px rgba(0,0,0,0.05);color:rgba(0,0,0,0.8);font-size:12px;font-size:.75rem;line-height:1;padding:.6em 1em .4em;text-shadow:0 1px 0 rgba(255,255,255,0.8)}
-button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{border-color:#ccc #bbb #aaa;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8),inset 0 15px 17px rgba(255,255,255,0.8),inset 0 -5px 12px rgba(0,0,0,0.02)}
+button,input[type="button"],input[type="reset"],input[type="submit"]{border:1px solid;border-color:#e31d1a;border-radius:0;background:#e31d1a;box-shadow:none;color:white;font-size:12px;font-size:.75rem;line-height:1;padding:.6em 1em .4em;text-shadow:none}
+button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{border-color:#ccc #bbb #aaa;box-shadow:none}
 button:active,button:focus,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:active,input[type="submit"]:focus{border-color:#aaa #bbb #bbb;box-shadow:inset 0 -1px 0 rgba(255,255,255,0.5),inset 0 2px 5px rgba(0,0,0,0.15)}
-input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea{color:#666;border:1px solid #ccc;border-radius:3px}
+select{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-image:url(...)}
+input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea{color:#666;border:1px solid #ccc;border-radius:0}
 input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus{color:#111}
 select{border:1px solid #ccc}
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"]{padding:3px}
 textarea{padding-left:3px;width:100%}
+.IDX-qsLabel,.IDX-qsInput{width:100%}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm{width:100%;display:-webkit-box !important;display:-webkit-flex !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+@media screen and (min-width:900px){.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsInput{width:100%}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsCityListLabel-12569,.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsIdxIDLabel-12569{display:block}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsIdxIDWrap-12569{margin-top:0}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsSubmit-12569{margin-top:24px}
+}.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm input[type="submit"].IDX-qsInput{padding:10px 20px;width:100% !important}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsFieldWrap #IDX-quicksearchForm-12569 .IDX-qsSelectInput select{width:100% !important}
+.IDX-qsFieldWrap{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
+@media screen and (min-width:900px){.IDX-qsFieldWrap{-webkit-flex-basis:15%;-ms-flex-preferred-size:15%;flex-basis:15%;display:block}
+}select{border-radius:0;padding:0 25px 0 5px;background:url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;height:34px;overflow:hidden;background-color:#fff}
 a{color:#0999f3}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
@@ -1506,16 +1519,18 @@ h2.tagline{width:100%;float:left;position:relative;text-align:center}
 }@media screen and (min-width:900px){h2.tagline{top:15%}
 }@media screen and (min-width:1200px){h2.tagline{font-size:50px;top:20%}
 }section.agents-home{text-align:center;padding:50px 0}
-section.agents{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}
-.agent{width:90%;margin:10px auto;background-color:white;padding:5%;text-align:center;-webkit-transition:all ease .4s;transition:all ease .4s;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
-.agent:hover{box-shadow:-1px 2px 15px 1px rgba(0,0,0,0.35)}
-@media screen and (min-width:600px){.agent{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%}
-}@media screen and (min-width:1200px){.agent{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
-}.agent .agent-photo{width:200px;height:200px;border-radius:50%;margin:0 auto;overflow:hidden}
-.agent .agent-photo img{width:100%}
-.agent .agent-phone,.agent .agent-email{width:100%;margin:5px 0;color:#313841}
-.agent .agent-phone a,.agent .agent-email a{color:#313841;text-decoration:none}
-.agent .agent-email{font-size:10px}
+section.agents,section.resources{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}
+.agent,.resource-card{width:90%;margin:10px auto;background-color:white;padding:5%;text-align:center;-webkit-transition:all ease .4s;transition:all ease .4s;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
+.agent:hover,.resource-card:hover{box-shadow:-1px 2px 15px 1px rgba(0,0,0,0.35)}
+@media screen and (min-width:600px){.agent,.resource-card{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%}
+}@media screen and (min-width:1200px){.agent,.resource-card{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
+}.agent .agent-photo,.resource-card .agent-photo{width:200px;height:200px;border-radius:50%;margin:0 auto;overflow:hidden}
+.agent .agent-photo img,.resource-card .agent-photo img{width:100%}
+.agent .agent-phone,.agent .agent-email,.resource-card .agent-phone,.resource-card .agent-email{width:100%;margin:5px 0;color:#313841}
+.agent .agent-phone a,.agent .agent-email a,.resource-card .agent-phone a,.resource-card .agent-email a{color:#313841;text-decoration:none}
+.agent .agent-email,.resource-card .agent-email{font-size:10px}
+.resources h3{width:100%;text-align:center;padding:0 0 20px 0;border-bottom:1px solid #ccc}
+.resource-card h4 a{color:#5d8db5}
 .agent-single{width:90%;margin:10px auto;background-color:white;text-align:center;-webkit-transition:all ease .4s;transition:all ease .4s}
 @media screen and (min-width:600px){.agent-single{width:100%;margin:0;float:left}
 }.agent-single .agent-photo-single{width:100%;overflow:hidden;float:left}

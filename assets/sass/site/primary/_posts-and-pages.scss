@@ -192,14 +192,14 @@ section.agents-home {
 	text-align: center;
 	padding: 50px 0;
 }
-section.agents {
+section.agents, section.resources {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: stretch;
 }
-.agent {
+.agent, .resource-card {
 	width: 90%;
 	margin: 10px auto;
 	background-color: rgba(#fff, 1);
@@ -242,7 +242,21 @@ section.agents {
 	}
 	
 }
-
+.resources {
+	h3 {
+		width: 100%;
+		text-align: center;
+		padding: 0 0 20px 0;
+		border-bottom: 1px solid #ccc;
+	}
+}
+.resource-card {
+	h4 {
+		a {
+			color: $color-blue;
+		}
+	}
+}
 .agent-single {
 	width: 90%;
 	margin: 10px auto;
