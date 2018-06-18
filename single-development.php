@@ -38,9 +38,9 @@ foreach( $posts_array as $post ) : setup_postdata( $post );
 endforeach;
 
 
-echo '<pre>';
-print_r($agentIds);
-echo '</pre>';
+// echo '<pre>';
+// print_r($agentIds);
+// echo '</pre>';
 
 // if( $post_object ): 
 
