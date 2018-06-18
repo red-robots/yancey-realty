@@ -11,7 +11,7 @@ get_header();
 //$agents = get_field('agent');
 $form_chooser = get_field('form_chooser');
 $floor_plans = get_field('floor_plans');
-$post_objects = get_field('agent');
+$post_objects = get_field('agent', false, false);
 $street = get_field('street');
 $city = get_field('city');
 $state = get_field('state');
@@ -39,7 +39,7 @@ endforeach;
 
 
 echo '<pre>';
-print_r($agents);
+print_r($agentIds);
 echo '</pre>';
 
 // if( $post_object ): 
@@ -187,6 +187,20 @@ echo '</pre>';
 		<div class="widget">
 			<h3>Agents for <?php the_title(); ?></h3>
 		<?php 
+		wp_reset_query();
+
+		// $args = array(
+		//   'post__in' => $agentIds,
+		//   // 'orderby' => 'post_date',
+		// );
+		// $post_objects = get_posts( $args );
+
+		echo '<pre>';
+		print_r($post_objects);
+		echo '</pre>';
+
+		shuffle( $post_objects );
+
 			foreach( $post_objects as $post ): 
 				setup_postdata($post);
 

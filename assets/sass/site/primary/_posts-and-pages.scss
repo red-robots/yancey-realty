@@ -561,6 +561,40 @@ section.resources {
 		justify-content: flex-start;
 	}
 }
+.resource-nav {
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 20px 10px;
+	background-color: #fff;
+	margin: 0 0 40px 0;
+	ul.the-sources {
+		width: 100%;
+		
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+		@media screen and (min-width: $tabwidth) {
+			flex-wrap: wrap;
+			justify-content: space-between;
+			flex-direction: row;
+		}
+	}
+	li {
+		list-style: none;
+		padding: 0;
+		margin: 0 5px;
+		width: auto;
+	}
+	a {
+		color: $color-red;
+		padding: 3px;
+		background-color: #fff;
+	}
+	
+}
 
 
 

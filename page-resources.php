@@ -38,24 +38,29 @@ get_header(); ?>
 
 				<?php $terms = get_terms( 'resource_type' );
 
-				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) { ?>
 
-					foreach ( $terms as $term ) { ?>
-						<section class="resource-nav">
-						<ul>
+				<section class="resource-nav">
+				<h2>Search By:</h2>
+						<ul class="the-sources">
+
+					<?php foreach ( $terms as $term ) { ?>
+						
 							<li>
 								<a href="<?php echo '#'.$term->slug; ?>"><?php echo $term->name; ?></a>
 							</li>
-						</ul>
+						
 							
-						</section>
-					<?php }
-
+						
+					<?php } ?>
+					</ul>
+					</section>
+					<?php
 				    // $output .= '<ul class="category-list">';
 				    foreach ( $terms as $term ) { ?>
 
 				     
-				        <h3><?php echo $term->name; ?></h3>
+				        <h3 id="<?php echo $term->slug; ?>"><?php echo $term->name; ?></h3>
 
 				            <?php $args = array(
 				                'post_type'     => 'resource',
