@@ -195,9 +195,9 @@ endforeach;
 		// );
 		// $post_objects = get_posts( $args );
 
-		echo '<pre>';
-		print_r($post_objects);
-		echo '</pre>';
+		// echo '<pre>';
+		// print_r($post_objects);
+		// echo '</pre>';
 
 		shuffle( $post_objects );
 
