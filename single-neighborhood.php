@@ -12,6 +12,7 @@ $agent = get_field('agent');
 $form_chooser = get_field('form_chooser');
 $floor_plans = get_field('floor_plans');
 $post_object = $agent;
+$IDX = get_field('idx_widget_field');
 
 if( $post_object ): 
 
@@ -31,6 +32,9 @@ if( $post_object ):
     	$facebook = get_field('facebook_link');
     	$twitter = get_field('twitter_link');
     	$instagram = get_field('instagram_link');
+    	if( $linkedin || $facebook || $twitter || $instagram ) {
+    		$links = 'yes';
+    	} else { $links = 'no'; }
 
 endif;
 wp_reset_postdata();
@@ -77,6 +81,12 @@ wp_reset_postdata();
 				<?php }
 
 				?>
+				<?php if( $IDX ) { ?>
+				<div class="dev-listings">
+				<h2><?php the_title(); ?> Listings</h2>
+					<?php echo $IDX; ?>
+				</div>
+				<?php } ?>
 				 
 				<div class="entry-meta">
 					<?php //acstarter_posted_on(); ?>
@@ -103,6 +113,7 @@ wp_reset_postdata();
 
 	<aside id="secondary" class="widget-area" role="complementary">
 		<div class="widget">
+		<?php if($agent) : ?>
 			<div class="agent">
 		    	<div class="agent-photo">
 		    		<img src="<?php echo $thumb; ?>" alt="<?php echo $photo['alt']; ?>">
@@ -152,7 +163,9 @@ wp_reset_postdata();
 			    <?php endif; ?>
 			    <div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
 		    </div>
+			<?php endif; ?>
 		</div>
+		<?php if($agent) : ?>
 		<section class="agent-blog">
 			<h2>From the <?php echo $agent->post_title; ?> Blog</h2>
 			<?php
@@ -184,6 +197,7 @@ wp_reset_postdata();
 			    <?php endwhile; ?>
 			<?php endif; ?>
 		</section>
+		<?php endif; ?>
 	</aside>
 </div>
 </div>
