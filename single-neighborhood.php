@@ -8,17 +8,17 @@
  */
 
 get_header(); 
-$agent = get_field('agent');
+// $agent = get_field('agent');
 $form_chooser = get_field('form_chooser');
 $floor_plans = get_field('floor_plans');
-$post_object = $agent;
+$post_objects = get_field('agent', false, false);
 $IDXfeatured = get_field('idx_widget_field_featured');
 $IDX = get_field('idx_widget_field');
 
-if( $post_object ): 
+if( $post_objects ): 
 
 	// override $post
-	$post = $post_object;
+	$post = $post_objects;
 	setup_postdata( $post );
 
 		// $agentPic = get_field('picture');
@@ -85,11 +85,15 @@ wp_reset_postdata();
 				<?php if( $IDX ) { ?>
 				<div class="dev-listings">
 				<h2><?php the_title(); ?> Listings</h2>
-				<h3>Yancey's Featured <?php the_title(); ?> Listings</h3>
-					<?php echo $IDXfeatured; ?>
+					<section class="yan-listing">
+						<h3>Yancey's Featured <?php the_title(); ?> Listings</h3>
+						<?php echo $IDXfeatured; ?>
+					</section>
 					<!-- end featured -->
-					<h3>Other <?php the_title(); ?> Listings</h3>
-					<?php echo $IDX; ?>
+					<section class="yan-listing">
+						<h3>Other <?php the_title(); ?> Listings</h3>
+						<?php echo $IDX; ?>
+					</section>
 				</div>
 				<?php } ?>
 				 
@@ -118,12 +122,46 @@ wp_reset_postdata();
 
 	<aside id="secondary" class="widget-area" role="complementary">
 		<div class="widget">
-		<?php if($agent) : ?>
+		<?php 
+		wp_reset_query();
+
+		// $args = array(
+		//   'post__in' => $agentIds,
+		//   // 'orderby' => 'post_date',
+		// );
+		// $post_objects = get_posts( $args );
+
+		// echo '<pre>';
+		// print_r($post_objects);
+		// echo '</pre>';
+
+		shuffle( $post_objects );
+
+			foreach( $post_objects as $post ): 
+				setup_postdata($post);
+
+				$photo = get_field('picture');
+		    	$size = 'agent';
+				$thumb = $photo['sizes'][ $size ];
+				$email = get_field('email');
+		    	$spambot = antispambot($email);
+		    	$phone = get_field('phone');
+		    	$bio = get_field('bio');
+		    	$linkedin = get_field('linkedin_link');
+		    	$facebook = get_field('facebook_link');
+		    	$twitter = get_field('twitter_link');
+		    	$instagram = get_field('instagram_link');
+
+		    	if( $linkedin || $facebook || $twitter || $instagram ) {
+		    		$links = 'yes';
+		    	} else { $links = 'no'; }
+		?>
+			
 			<div class="agent">
 		    	<div class="agent-photo">
 		    		<img src="<?php echo $thumb; ?>" alt="<?php echo $photo['alt']; ?>">
 		    	</div>
-    			<h2><?php echo $agent->post_title; ?></h2>
+		    	<h2><?php the_title(); ?></h2>
 		    	<?php if($phone) { ?>
 		    		<div class="agent-phone">
 		    			<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
@@ -166,11 +204,16 @@ wp_reset_postdata();
 			    		<?php } ?>
 			    	</ul>
 			    <?php endif; ?>
-			    <div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
-		    </div>
-			<?php endif; ?>
+	    	<div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
+    	</div>
+    	<?php endforeach; wp_reset_postdata(); ?>
+			
 		</div>
-		<?php if($agent) : ?>
+		<?php 
+		// change to a valid variable to work...
+		// originally, "agent" from top of page
+		$agentzzz = '';
+		if($agentzzz) : ?>
 		<section class="agent-blog">
 			<h2>From the <?php echo $agent->post_title; ?> Blog</h2>
 			<?php

@@ -91,6 +91,7 @@
 		font-weight: 300;
 		font-size: 16px;
 		width: 100%;
+		
 		@media screen and (min-width: $tabwidth) {
 			border-left: 1px solid $color-light-black;
 			line-height: 3;
@@ -215,17 +216,18 @@ button.menu-toggle {
 		padding: 0;
 		@media screen and (min-width: $tabwidth) {
 			flex-direction: row;
-			justify-content: center;
+			justify-content: flex-end;
+			// border-top: 1px solid #fff;
 		}
 		@media screen and (min-width: $midwidth) {
 
 		}
 		@media screen and (min-width: $deskwidth) {
-			flex-direction: column;
-			text-align: left;
-			border-left: 2px solid $color-light-black;
-			padding: 0 0 0 10px;
-			width: auto;
+			// flex-direction: column;
+			// text-align: left;
+			// border-left: 2px solid $color-light-black;
+			// padding: 0 0 0 10px;
+			// width: auto;
 		}
 		
 		
@@ -235,8 +237,18 @@ button.menu-toggle {
 	}
 	li {
 		width: 100%;
+		line-height: 3;
+		position: relative;
+		&:before {
+			content: '\f0d7';
+		        width: 20px;
+			    position: absolute;
+			    top: -15px;
+			    left: 45%;
+		}
 		@media screen and (min-width: $tabwidth) {
 			width: auto;
+			
 		}
 		
 	}
@@ -252,9 +264,10 @@ button.menu-toggle {
 		}
 		@media screen and (min-width: $tabwidth) {
 			padding: 5px 15px;
+
 		}
 		@media screen and (min-width: $deskwidth) {
-			padding: 5px;
+			padding: 0% 30px;
 		}
 	}
 }

@@ -303,14 +303,41 @@ input.gform_button {
 		@include transition(all ease .4s);
 		border: 1px solid #fff;
 		padding: 10px 20px;
+		position: relative;
 
 		&:hover {
 			color: $color-light-black;
 			border: 1px solid $color-light-black;
 			background-color: #fff;
 		}
+		&:before {
+			content: '';
+			width: 100%;
+			border-top: 1px solid #ddd;
+		}
 	}
 }
 .button {
+	
+}
+body.single {
+	.IDX-showcaseTable {
+		.IDX-showcaseContainer {
+			padding: 5% !important;
+			border: 0!important;
+			transform: scale(1);
+			background-color: #fff;
+			position: relative;
+			z-index: 1;
+			@include transition(all ease .2s);
+		}
+		.IDX-showcasePhoto {
+			width: 100%;
+		}
+		.IDX-showcaseContainer:hover {
+			transform: scale(1.05);
+			z-index: 2;
+		}
+	}
 	
 }

@@ -18,6 +18,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <link href="http://fonts.googleapis.com/css?family=Oswald:300,600|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-87DrmpqHRiY8hPLIr7ByqhPIywuSsjuQAfMXAE0sMUpY3BM7nXjf+mLIUSvhDArs" crossorigin="anonymous">
 
 <?php wp_head(); 
 
@@ -74,15 +75,17 @@ $phoneT = get_field('main_phone_2', 'option');
 		            </a>
 	            </div>
 	        <?php } ?>
+	        <section class="navs">
+	        	<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				</nav><!-- #site-navigation -->
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
-
-			<nav class="b-nav">
-				<?php wp_nav_menu( array( 'theme_location' => 'subnav' ) ); ?>
-			</nav>
+				<nav class="b-nav">
+					<?php wp_nav_menu( array( 'theme_location' => 'subnav' ) ); ?>
+				</nav>
+	        </section>
+			
 
 	</div><!-- wrapper -->
 	</header><!-- #masthead -->

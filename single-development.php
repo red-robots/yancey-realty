@@ -19,7 +19,30 @@ $zip = get_field('zip');
 $phone_number = get_field('phone_number');
 
 
+if( $post_objects ): 
 
+	// override $post
+	$post = $post_objects;
+	setup_postdata( $post );
+
+		// $agentPic = get_field('picture');
+		$photo = get_field('picture');
+    	$size = 'agent';
+		$thumb = $photo['sizes'][ $size ];
+		$email = get_field('email');
+    	$spambot = antispambot($email);
+    	$phone = get_field('phone');
+    	$bio = get_field('bio');
+    	$linkedin = get_field('linkedin_link');
+    	$facebook = get_field('facebook_link');
+    	$twitter = get_field('twitter_link');
+    	$instagram = get_field('instagram_link');
+    	if( $linkedin || $facebook || $twitter || $instagram ) {
+    		$links = 'yes';
+    	} else { $links = 'no'; }
+
+endif;
+wp_reset_postdata();
 
 
 $args = array(
