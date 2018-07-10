@@ -14,7 +14,7 @@
     <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
 
     	$photo = get_field('picture');
-    	$size = 'thumbnail';
+    	$size = 'agent';
 		$thumb = $photo['sizes'][ $size ];
     	$email = get_field('email');
     	$spambot = antispambot($email);
@@ -38,21 +38,29 @@
 
     <div class="agent">
     	<div class="agent-photo">
-    		<img src="<?php echo $thumb; ?>" alt="<?php echo $photo['alt']; ?>">
+    		<?php if( $thumb != '' ) { ?>
+    			<img src="<?php echo $thumb; ?>" alt="<?php echo $photo['alt']; ?>">
+    		<?php } else { ?>
+    			<img src="<?php bloginfo('template_url'); ?>/images/agent-default.png" alt="Yancey Agent">
+    		<?php } ?>
     	</div>
-    	<h2><?php the_title(); ?></h2>
-    	<?php if($phone) { ?>
-    		<div class="agent-phone">
-    			<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
-    		</div>
-    	<?php } ?>
-    	<?php if($email) { ?>
-    		<div class="agent-email">
-    			<a href="mailto:<?php echo $spambot; ?>"><?php echo $spambot; ?></a>
-    		</div>
-    	<?php } ?>
-    	<?php if( $links == 'yes') : ?>
+    	<div class="agent-info">
+    		<h2><?php the_title(); ?></h2>
+	    	<?php if($phone) { ?>
+	    		<div class="agent-phone">
+	    			<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
+	    		</div>
+	    	<?php } ?>
+	    	<?php if($email) { ?>
+	    		<div class="agent-email">
+	    			<a href="mailto:<?php echo $spambot; ?>"><?php echo $spambot; ?></a>
+	    		</div>
+	    	<?php } ?>
+    	</div>
+    	
+    	
 	    	<ul class="agent-social">
+	    	<?php if( $links == 'yes') : ?>
 	    		<?php if($facebook) { ?>
 	    			<li>
 		    			<a target="_blank" href="<?php echo $facebook; ?>">
@@ -81,8 +89,9 @@
 		    			</a>
 	    			</li>
 	    		<?php } ?>
+	    		 <?php endif; ?>
 	    	</ul>
-	    <?php endif; ?>
+	   
 	    <div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
     </div>
 

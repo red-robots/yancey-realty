@@ -12,6 +12,7 @@ $agent = get_field('agent');
 $form_chooser = get_field('form_chooser');
 $floor_plans = get_field('floor_plans');
 $post_object = $agent;
+$IDXfeatured = get_field('idx_widget_field_featured');
 $IDX = get_field('idx_widget_field');
 
 if( $post_object ): 
@@ -84,6 +85,10 @@ wp_reset_postdata();
 				<?php if( $IDX ) { ?>
 				<div class="dev-listings">
 				<h2><?php the_title(); ?> Listings</h2>
+				<h3>Yancey's Featured <?php the_title(); ?> Listings</h3>
+					<?php echo $IDXfeatured; ?>
+					<!-- end featured -->
+					<h3>Other <?php the_title(); ?> Listings</h3>
 					<?php echo $IDX; ?>
 				</div>
 				<?php } ?>
