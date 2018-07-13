@@ -123,7 +123,7 @@
 		@media screen and (min-width: $deskwidth) {
 			padding: 0% 30px;
 		}
-		&:hover {
+		&:hover, &.active {
 			background-color: rgba(#fff, 1);
 			color: $color-black;
 		}
@@ -239,12 +239,16 @@ button.menu-toggle {
 		width: 100%;
 		line-height: 3;
 		position: relative;
+		font-weight: bold;
 		&:before {
-			content: '\f0d7';
-		        width: 20px;
-			    position: absolute;
-			    top: -15px;
-			    left: 45%;
+			// content: '';
+			// // content: '\f0d7';
+		 //        width: 20px;
+		 //        height: 12px;
+		 //        background-image: url(images/arrow.png);
+			//     position: absolute;
+			//     top: -15px;
+			//     left: 45%;
 		}
 		@media screen and (min-width: $tabwidth) {
 			width: auto;
@@ -254,11 +258,12 @@ button.menu-toggle {
 	}
 	a {
 		// background-color: rgba($color-blue, 1);
-		color: #fff;
+		// color: #fff;
+		color: $color-blue;
 		padding: 5px;
 		display: block;
 		@include transition(all ease .4s);
-		&:hover {
+		&:hover, &.active {
 			background-color: rgba(#fff, 1);
 			color: $color-black;
 		}

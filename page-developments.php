@@ -44,10 +44,11 @@ get_header(); ?>
 	'paged' => $paged,
 ));
 	if ($wp_query->have_posts()) : ?>
-    <?php while ($wp_query->have_posts()) : ?>
-        <section class="developments grey-bg">
+		<section class="developments grey-bg">
         	<div class="wrapper">
-        	<div class="development-flex">
+        		<div class="development-flex">
+    <?php while ($wp_query->have_posts()) : ?>
+        
         
     <?php $wp_query->the_post(); 
     	
@@ -70,9 +71,9 @@ get_header(); ?>
 	    		</div>
 	    </div>
 		<?php endwhile; ?>
-		</div>
-		</div>
-	</section>
+				</div>
+			</div>
+		</section>
 <?php endif; ?>
 <?php
 // get_sidebar();
