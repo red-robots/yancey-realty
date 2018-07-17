@@ -59,8 +59,9 @@ get_header(); ?>
 			    ?>
 
 				    <div class="development ">
+				    <h2><?php the_title(); ?></h2>
 				    	<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
-				    		<h2><?php the_title(); ?></h2>
+				    		
 				    		<?php the_excerpt(); ?>
 				    		<div class="more">
 				    			<a href="<?php the_permalink(); ?>">Go</a>

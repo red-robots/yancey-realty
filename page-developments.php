@@ -60,6 +60,24 @@ get_header(); ?>
     	// print_r($agent);
     	// echo '</pre>';
 
+// $my = Array(
+//     [0] => WP_Term Object
+//         (
+//             [term_id] => 142
+//             [name] => Arts &amp; Culture
+//             [slug] => arts-culture
+//             [term_group] => 0
+//             [term_taxonomy_id] => 142
+//             [taxonomy] => event_cat
+//             [description] => 
+//             [parent] => 0
+//             [count] => 1021
+//             [filter] => raw
+//         )
+
+// );
+
+
     ?>
 
 	    <div class="development ">

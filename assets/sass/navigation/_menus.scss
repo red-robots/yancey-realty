@@ -216,7 +216,8 @@ button.menu-toggle {
 		padding: 0;
 		@media screen and (min-width: $tabwidth) {
 			flex-direction: row;
-			justify-content: flex-end;
+			// justify-content: flex-end;
+			justify-content: center;
 			// border-top: 1px solid #fff;
 		}
 		@media screen and (min-width: $midwidth) {
