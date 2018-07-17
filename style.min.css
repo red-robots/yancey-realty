@@ -1278,14 +1278,15 @@ select{border:1px solid #ccc}
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"]{padding:3px}
 textarea{padding-left:3px;width:100%}
 .IDX-qsLabel,.IDX-qsInput{width:100%}
-.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm{width:100%;display:-webkit-box !important;display:-webkit-flex !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
-@media screen and (min-width:900px){.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap}
-.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsInput{width:100%}
-.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsCityListLabel-12569,.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsIdxIDLabel-12569{display:block}
-.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsIdxIDWrap-12569{margin-top:0}
-.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsSubmit-12569{margin-top:24px}
-}.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm input[type="submit"].IDX-qsInput{padding:10px 20px;width:100% !important}
-.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsFieldWrap #IDX-quicksearchForm-12569 .IDX-qsSelectInput select{width:100% !important}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm{width:100%;display:-webkit-box !important;display:-webkit-flex !important;display:-ms-flexbox !important;display:flex !important;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+@media screen and (min-width:900px){.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsInput,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsInput{width:100%}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsCityListLabel-12569,.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsIdxIDLabel-12569,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsCityListLabel-12569,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsIdxIDLabel-12569{display:block}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsIdxIDWrap-12569,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsIdxIDWrap-12569{margin-top:0}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsSubmit-12569,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsSubmit-12569{margin-top:24px}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsCityListLabel-42395,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm #IDX-qsCityListLabel-42395{display:block !important}
+}.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm input[type="submit"].IDX-qsInput,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm input[type="submit"].IDX-qsInput{padding:10px 20px;width:100% !important}
+.prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsFieldWrap #IDX-quicksearchForm-12569 .IDX-qsSelectInput select,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsFieldWrap #IDX-quicksearchForm-12569 .IDX-qsSelectInput select{width:100% !important}
 .IDX-qsFieldWrap{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
 @media screen and (min-width:900px){.IDX-qsFieldWrap{-webkit-flex-basis:15%;-ms-flex-preferred-size:15%;flex-basis:15%;display:block}
 }select{border-radius:0;padding:0 25px 0 5px;background:url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;height:34px;overflow:hidden;background-color:#fff}
@@ -1503,20 +1504,22 @@ body.single .IDX-showcaseTable .IDX-showcaseContainer:hover{-webkit-transform:sc
 @media screen and (min-width:900px){.propsearch-page{padding:10px}
 }.prop-search{width:100%;background-color:rgba(0,0,0,0.6);padding:40px 0;color:#fff;position:relative}
 @media screen and (min-width:900px){.prop-search{position:absolute;bottom:0;left:0}
-}.prop-search h2,.propsearch-page h2{text-align:center;width:100%;color:#fff;font-size:40px}
-.prop-search form.homesearch,.propsearch-page form.homesearch{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding:0 10px}
-@media screen and (min-width:900px){.prop-search form.homesearch,.propsearch-page form.homesearch{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;padding:0}
-}.prop-search form.homesearch .block,.propsearch-page form.homesearch .block{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
-@media screen and (min-width:900px){.prop-search form.homesearch .block,.propsearch-page form.homesearch .block{-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto}
-}.prop-search form.homesearch .home-btn-search,.propsearch-page form.homesearch .home-btn-search{padding:30px 0;background-color:#e31d1a;color:#fff;box-shadow:none;border:0;text-transform:uppercase;border-radius:0;width:100%;-webkit-transition:all ease .3s;transition:all ease .3s}
-.prop-search form.homesearch .home-btn-search:hover,.propsearch-page form.homesearch .home-btn-search:hover{box-shadow:none;background-color:#5d8db5}
-@media screen and (min-width:900px){.prop-search form.homesearch .home-btn-search,.propsearch-page form.homesearch .home-btn-search{width:auto;padding:30px}
-}.prop-search form.homesearch .searchlabel,.propsearch-page form.homesearch .searchlabel{width:100%;margin:0 0 5px 0}
-.prop-search form.homesearch select,.propsearch-page form.homesearch select{width:100%;border:1px solid #fff;background-color:rgba(255,255,255,0.8);padding:20px;color:#000;border-radius:0;display:inline-block;width:100%;cursor:pointer;padding:10px 15px;outline:0;border-radius:0;appearance:none;-webkit-appearance:none;-moz-appearance:none}
-@media screen and (min-width:600px){.prop-search form.homesearch select,.propsearch-page form.homesearch select{width:100%}
-}@media screen and (min-width:900px){.prop-search form.homesearch select,.propsearch-page form.homesearch select{width:90%}
-}@media screen and (min-width:1200px){.prop-search form.homesearch select,.propsearch-page form.homesearch select{width:100%}
-}.prop-search form.homesearch option,.propsearch-page form.homesearch option{padding:20px}
+}.rental-search{width:100%;background-color:rgba(0,0,0,0.6);padding:40px 0;color:#fff;position:relative}
+#IDX-qsSubmit-42395{padding:23px 20px !important}
+.prop-search h2,.propsearch-page h2,.rental-search h2{text-align:center;width:100%;color:#fff;font-size:40px}
+.prop-search form.homesearch,.propsearch-page form.homesearch,.rental-search form.homesearch{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding:0 10px}
+@media screen and (min-width:900px){.prop-search form.homesearch,.propsearch-page form.homesearch,.rental-search form.homesearch{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;padding:0}
+}.prop-search form.homesearch .block,.propsearch-page form.homesearch .block,.rental-search form.homesearch .block{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
+@media screen and (min-width:900px){.prop-search form.homesearch .block,.propsearch-page form.homesearch .block,.rental-search form.homesearch .block{-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto}
+}.prop-search form.homesearch .home-btn-search,.propsearch-page form.homesearch .home-btn-search,.rental-search form.homesearch .home-btn-search{padding:30px 0;background-color:#e31d1a;color:#fff;box-shadow:none;border:0;text-transform:uppercase;border-radius:0;width:100%;-webkit-transition:all ease .3s;transition:all ease .3s}
+.prop-search form.homesearch .home-btn-search:hover,.propsearch-page form.homesearch .home-btn-search:hover,.rental-search form.homesearch .home-btn-search:hover{box-shadow:none;background-color:#5d8db5}
+@media screen and (min-width:900px){.prop-search form.homesearch .home-btn-search,.propsearch-page form.homesearch .home-btn-search,.rental-search form.homesearch .home-btn-search{width:auto;padding:30px}
+}.prop-search form.homesearch .searchlabel,.propsearch-page form.homesearch .searchlabel,.rental-search form.homesearch .searchlabel{width:100%;margin:0 0 5px 0}
+.prop-search form.homesearch select,.propsearch-page form.homesearch select,.rental-search form.homesearch select{width:100%;border:1px solid #fff;background-color:rgba(255,255,255,0.8);padding:20px;color:#000;border-radius:0;display:inline-block;width:100%;cursor:pointer;padding:10px 15px;outline:0;border-radius:0;appearance:none;-webkit-appearance:none;-moz-appearance:none}
+@media screen and (min-width:600px){.prop-search form.homesearch select,.propsearch-page form.homesearch select,.rental-search form.homesearch select{width:100%}
+}@media screen and (min-width:900px){.prop-search form.homesearch select,.propsearch-page form.homesearch select,.rental-search form.homesearch select{width:90%}
+}@media screen and (min-width:1200px){.prop-search form.homesearch select,.propsearch-page form.homesearch select,.rental-search form.homesearch select{width:100%}
+}.prop-search form.homesearch option,.propsearch-page form.homesearch option,.rental-search form.homesearch option{padding:20px}
 h2.tagline{width:100%;float:left;position:relative;text-align:center}
 @media screen and (min-width:600px){h2.tagline{position:absolute;top:10%;left:0;color:#fff;font-size:40px;text-shadow:1px 1px 2px #969696}
 }@media screen and (min-width:900px){h2.tagline{top:15%}

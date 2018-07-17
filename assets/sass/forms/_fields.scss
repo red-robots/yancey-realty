@@ -60,7 +60,7 @@ textarea {
 	width: 100%;
 }
 // prop search
-.prop-search {
+.prop-search, .rental-search {
 	.IDX-quicksearchWrapper {
 		.IDX-quicksearchForm {
 			width: 100%;
@@ -85,6 +85,9 @@ textarea {
 				}
 				#IDX-qsSubmit-12569 {
 					margin-top: 24px;
+				}
+				#IDX-qsCityListLabel-42395 {
+					display: block !important;
 				}
 			}
 			input[type="submit"].IDX-qsInput {
