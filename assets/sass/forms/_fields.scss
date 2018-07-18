@@ -64,11 +64,19 @@ textarea {
 	.IDX-quicksearchWrapper {
 		.IDX-quicksearchForm {
 			width: 100%;
-			display: flex !important;
-			flex-direction: row;
-			justify-content: center;
-			flex-wrap: wrap;
-			align-items: center;
+			// display: flex !important;
+			// flex-direction: row;
+			// justify-content: center;
+			// flex-wrap: wrap;
+			// align-items: center;
+
+			// .IDX-quicksearchForm > div {
+			// 	flex-grow: 1;
+			// }
+			// &::after {
+			//   content: '';
+			//   flex-grow: 1000000000;
+			// }
 
 
 			@media screen and (min-width: $midwidth) {
@@ -86,13 +94,40 @@ textarea {
 				#IDX-qsSubmit-12569 {
 					margin-top: 24px;
 				}
+
 				#IDX-qsCityListLabel-42395 {
 					display: block !important;
 				}
+				#IDX-qsIdxIDWrap-12569,
+				#IDX-qsPtWrap-12569,
+				#IDX-qsMinPriceWrap-12569,
+				#IDX-qsMaxPriceWrap-12569,
+				#IDX-qsMinBedWrap-12569,
+				#IDX-qsMinBathWrap-12569,
+				#IDX-qsCityListWrap-12569,
+				#IDX-qsIdxIDWrap-42395,
+				#IDX-qsPtWrap-42395,
+				#IDX-qsMinPriceWrap-42395,
+				#IDX-qsMaxPriceWrap-42395,
+				#IDX-qsMinBedWrap-42395,
+				#IDX-qsMinBathWrap-42395,
+				#IDX-qsCityListWrap-42395 {
+					width: 100%;
+					@media screen and (min-width: $midwidth) {
+						width: 14%;
+					}
+				}
+				#IDX-qsSubmitWrap-12569,
+				#IDX-qsSubmitWrap-42395 {
+					width: 100%;
+					text-align: center;
+				}
 			}
 			input[type="submit"].IDX-qsInput {
-				padding: 10px 20px;
-				width: 100% !important;
+				padding: 10px 50px;
+				// width: 100% !important;
+				display: inline-block;
+				width: auto !important;
 			}
 			.IDX-qsFieldWrap #IDX-quicksearchForm-12569 .IDX-qsSelectInput select {
 		width: 100% !important;

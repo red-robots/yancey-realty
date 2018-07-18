@@ -69,7 +69,7 @@
 .prop-search {
 	width: 100%;
 	background-color: rgba(#000, .6);
-	padding: 40px 0;
+	padding: 10px 0;
 	color: #fff;
 	position: relative;
 	@media screen and (min-width: $midwidth) {
@@ -97,9 +97,6 @@
 		
 	}
 
-}
-#IDX-qsSubmit-42395 {
-	padding: 23px 20px !important;
 }
 .prop-search, .propsearch-page, .rental-search  {
 	
@@ -590,11 +587,15 @@ section.resources {
 		justify-content: space-between;
 	}
 	.link {
+		text-align: center;
 		width: 90%;
 		margin: 0 auto 30px auto;
 		@media screen and (min-width: $tabwidth) {
 			flex-basis: 30%;
 		}
+	}
+	h3 {
+		text-align: center;
 	}	
 }
 .action-buttons {

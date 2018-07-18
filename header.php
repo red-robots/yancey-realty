@@ -81,13 +81,14 @@ $phoneT = get_field('main_phone_2', 'option');
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
-				<nav class="b-nav">
-					<?php wp_nav_menu( array( 'theme_location' => 'subnav' ) ); ?>
-				</nav>
+				
 	        </section>
 			
 
 	</div><!-- wrapper -->
+		<nav class="b-nav">
+			<?php wp_nav_menu( array( 'theme_location' => 'subnav' ) ); ?>
+		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content ">

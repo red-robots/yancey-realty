@@ -21,9 +21,15 @@ get_header(); ?>
 
 			</article>
 
+			<section id="idxqs-2" class="widget idxqs">
+				<div class="rental-search">
+					<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-12569" src="//yanceyrealty.idxbroker.com/idx/quicksearchjs.php?widgetid=12569"></script>
+				</div>
+			</section>
+
 			<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-40091" src="//yanceyrealty.idxbroker.com/idx/customshowcasejs.php?widgetid=40091"></script>
 
-			<h2>Other Listings</h2>
+			<!-- <h2>Other Listings</h2> -->
 
 			<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-42389" src="//yanceyrealty.idxbroker.com/idx/customshowcasejs.php?widgetid=42389"></script>
 

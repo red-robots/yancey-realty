@@ -42,6 +42,10 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div>
+
+
+
+	
 	<div class="wrapper">
 	<div class="prop-manage">
 		<?php if( $link ) { ?>
@@ -63,18 +67,18 @@ get_header(); ?>
 		<?php } ?>
 		</div>
 
-
-		<h2>Yancey's Rental</h2>
-		<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-42390" src="//yanceyrealty.idxbroker.com/idx/customshowcasejs.php?widgetid=42390"></script>
-
-		<h2>Other Rentals</h2>
-		</div>
-
-			<section id="idxqs-2" class="widget idxqs">
+		<section id="idxqs-2" class="widget idxqs">
 				<div class="rental-search">
 					<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-42395" src="//yanceyrealty.idxbroker.com/idx/quicksearchjs.php?widgetid=42395"></script>
 				</div>
-		</section>
+			</section>
+		
+		<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-42390" src="//yanceyrealty.idxbroker.com/idx/customshowcasejs.php?widgetid=42390"></script>
+
+		
+		</div>
+
+			
 
 		<div class="wrapper">
 		<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-42391" src="//yanceyrealty.idxbroker.com/idx/customshowcasejs.php?widgetid=42391"></script>
