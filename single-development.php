@@ -178,7 +178,8 @@ endforeach;
 			if( $form_chooser ) { ?>
 				<div class="form" >
 				<h2>Interested? Contact us Today.</h2>
-					<?php echo do_shortcode('[gravityform id="'.$form_chooser.'" title="false" description="false"]'); ?>
+					<?php //echo do_shortcode('[gravityform id="'.$form_chooser.'" title="false" description="false"]'); ?>
+					<?php get_template_part('inc/infusion-form'); ?>
 				</div>
 			<?php } ?>
 
