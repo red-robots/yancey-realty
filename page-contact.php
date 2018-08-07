@@ -34,6 +34,7 @@ $mphone = get_field('main_phone_2', 'option');
 
 						<div class="entry-content">
 							<?php the_content(); ?>
+							<?php get_template_part('inc/infusion-form'); ?>
 						</div><!-- .entry-content -->
 
 					</article><!-- #post-## -->
