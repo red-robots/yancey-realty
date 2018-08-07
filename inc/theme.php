@@ -6,7 +6,15 @@
  *
  * @package ACStarter
  */
-
+/**
+* preload Gravity Forms' stylesheets in head
+*/
+add_action('wp_enqueue_scripts', function() {
+    if (function_exists('gravity_form_enqueue_scripts')) {
+        // newsletter subscription form
+        gravity_form_enqueue_scripts(5);
+    }
+});
 /*-------------------------------------
 	Custom client login, link and title.
 ---------------------------------------*/
