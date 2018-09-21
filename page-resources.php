@@ -72,11 +72,72 @@ get_header(); ?>
 
 				            if ( $the_query->have_posts() ) { ?>
 				                <section class="resources">
-				                <?php while ( $the_query->have_posts() ) {
-				                    $the_query->the_post(); ?>
+				                <?php while ( $the_query->have_posts() ) { $the_query->the_post(); 
+				                	$name=get_field('name');
+									$title=get_field('title');
+									$cell=get_field('cell');
+									$office=get_field('office');
+									$fax=get_field('fax');
+									$email=get_field('email');
+									$street=get_field('street');
+									$city=get_field('city');
+									$state=get_field('state');
+									$zip=get_field('zip');
+									$website=get_field('website');
+									$license=get_field('license');
+									?>
 				                    <div class="resource-card">
 				                    	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				                    	<div class="more"><a href="<?php the_permalink(); ?>">More Info</a></div>
+				                    	<?php if($name) { ?>
+				<div class="item">
+					Name: <?php echo $name; ?>
+				</div>
+			<?php } ?>
+			<?php if($title) { ?>
+				<div class="item">
+					Title: <?php echo $title; ?>
+				</div>
+			<?php } ?>
+			<?php if($cell) { ?>
+				<div class="item">
+					Cell: <?php echo $cell; ?>
+				</div>
+			<?php } ?>
+			<?php if($office) { ?>
+				<div class="item">
+					Office: <?php echo $office; ?>
+				</div>
+			<?php } ?>
+			<?php if($fax) { ?>
+				<div class="item">
+					Fax: <?php echo $fax; ?>
+				</div>
+			<?php } ?>
+			<?php if($email) { 
+				$email=antispambot($email);
+				?>
+				<div class="item">
+					Email: <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+				</div>
+			<?php } ?>
+			<?php if($street) { ?>
+				<div class="item">
+					Address: <br>
+					<?php if($street){echo $street;} ?><br>
+					<?php if($city){echo $city;} ?> <?php if($state){echo ', '.$state;} ?> <?php if($zip){echo $zip;} ?>
+				</div>
+			<?php } ?>
+			<?php if($license) { ?>
+				<div class="item">
+					License: <?php echo $license; ?>
+				</div>
+			<?php } ?>
+									<?php if($website) { ?>
+				                    	<div class="more"><a href="<?php echo $website; ?>">More Info</a></div>
+				                    <?php } ?>
+
+
+
 				                    </div>
 				                <?php } ?>
 				                </section>
