@@ -87,7 +87,7 @@ get_header(); ?>
 									$license=get_field('license');
 									?>
 				                    <div class="resource-card">
-				                    	<h4><a href="<?php the_permalink(); ?>">Visit Website</a></h4>
+				                    	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 				                    	<?php if($name) { ?>
 				<div class="item">
 					Name: <?php echo $name; ?>
@@ -133,7 +133,7 @@ get_header(); ?>
 				</div>
 			<?php } ?>
 									<?php if($website) { ?>
-				                    	<div class="more"><a href="<?php echo $website; ?>">More Info</a></div>
+				                    	<div class="more"><a href="<?php echo $website; ?>">Visit Website</a></div>
 				                    <?php } ?>
 
 
