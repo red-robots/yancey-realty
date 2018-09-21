@@ -78,7 +78,7 @@ get_header(); ?>
 					Email: <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
 				</div>
 			<?php } ?>
-			<?php if($name) { ?>
+			<?php if($street) { ?>
 				<div class="item">
 					Address: <br>
 					<?php if($street){echo $street;} ?><br>
