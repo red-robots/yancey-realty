@@ -86,12 +86,12 @@ wp_reset_postdata();
 				<div class="dev-listings">
 				<h2><?php the_title(); ?> Listings</h2>
 					<section class="yan-listing">
-						<h3>Yancey's Featured <?php the_title(); ?> Listings</h3>
+						<!-- <h3>Yancey's Featured <?php the_title(); ?> Listings</h3> -->
 						<?php echo $IDXfeatured; ?>
 					</section>
 					<!-- end featured -->
 					<section class="yan-listing">
-						<h3>Other <?php the_title(); ?> Listings</h3>
+						<!-- <h3>Other <?php the_title(); ?> Listings</h3> -->
 						<?php echo $IDX; ?>
 					</section>
 				</div>

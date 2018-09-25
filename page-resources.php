@@ -35,6 +35,8 @@ get_header(); ?>
 				<section class="resources">
 					
 				
+				    
+				
 
 				<?php $terms = get_terms( 'resource_type' );
 
@@ -42,18 +44,21 @@ get_header(); ?>
 
 				<section class="resource-nav">
 				<h2>Search By:</h2>
-						<ul class="the-sources">
+					<select name="dropdpown" size="1" id="select-anchor">
+						<!-- <ul class="the-sources"> -->
 
 					<?php foreach ( $terms as $term ) { ?>
-						
-							<li>
+						<option value="<?php echo '#'.$term->slug; ?>"><?php echo $term->name; ?></option>
+				  
+							<!-- <li>
 								<a href="<?php echo '#'.$term->slug; ?>"><?php echo $term->name; ?></a>
 							</li>
-						
+						 -->
 							
 						
 					<?php } ?>
-					</ul>
+					</select>
+					<!-- </ul> -->
 					</section>
 					<?php
 				    // $output .= '<ul class="category-list">';

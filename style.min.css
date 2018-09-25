@@ -1493,6 +1493,7 @@ input.gform_button:hover{background-color:#313841;box-shadow:none}
 body.single .IDX-showcaseTable .IDX-showcaseContainer{padding:5% !important;border:0 !important;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);background-color:#fff;position:relative;z-index:1;-webkit-transition:all ease .2s;transition:all ease .2s}
 body.single .IDX-showcaseTable .IDX-showcasePhoto{width:100%}
 body.single .IDX-showcaseTable .IDX-showcaseContainer:hover{-webkit-transform:scale(1.05);-ms-transform:scale(1.05);transform:scale(1.05);z-index:2}
+.IDX-resultsCountMessage{display:none}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .byline,.updated:not(.published){display:none}
