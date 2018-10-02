@@ -7,6 +7,14 @@
 
 jQuery(document).ready(function ($) {
 	
+
+	$("label[for='omnibar']").text("Search by Zip");
+	$("input[type=text].idx-omnibar-input").val("Search by Zip");
+	$("input[type=text].idx-omnibar-input").on('click focusin', function() {
+	    this.value = '';
+	});
+
+
 	/*
 	*
 	*	Current Page Active

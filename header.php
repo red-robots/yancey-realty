@@ -87,7 +87,12 @@ $phoneT = get_field('main_phone_2', 'option');
 
 	</div><!-- wrapper -->
 		<nav class="b-nav">
-			<?php wp_nav_menu( array( 'theme_location' => 'subnav' ) ); ?>
+			<div class="wrapper">
+				<?php wp_nav_menu( array( 'theme_location' => 'subnav' ) ); ?>
+				<div class="zip-search">
+					<?php if ( is_active_sidebar( 'sidebar-search' ) ) {dynamic_sidebar( 'sidebar-search' );} ?>
+				</div>
+			</div>
 		</nav>
 	</header><!-- #masthead -->
 

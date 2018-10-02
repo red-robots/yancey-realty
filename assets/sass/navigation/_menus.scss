@@ -201,6 +201,9 @@ button.menu-toggle {
 	}
 }
 .b-nav {
+	width: 100%;
+	position: relative;
+	padding: 10px 0;
 	text-transform: uppercase;
 		font-family: $font-heading;
 		font-weight: 300;

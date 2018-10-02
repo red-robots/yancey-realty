@@ -29,6 +29,7 @@ a {text-decoration: none;}
 	width: 100%;
 	margin: 0px auto;
 	padding: 20px;
+	position: relative;
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
@@ -37,6 +38,45 @@ a {text-decoration: none;}
 		width: 90%;
 		padding: 0px;
 	}
+}
+.zip-search {
+	width: 100%;
+	text-align: center;
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+		margin: 0 auto;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: auto;
+		position: absolute;
+		right: 0;
+		top: 5px;
+		margin: 0;
+	}
+	.idx-omnibar-form {
+		padding: 0;
+		width: auto;
+		margin: 0 auto;
+		display: inline-block;
+	}
+	.idx-omnibar-form label {
+		width: 250px;
+	}
+	input#omnibar, .awesomplete {
+		width: 150px !important;
+		display: inline-block;
+	}
+	.idx-omnibar-form button {
+		width: 70px;
+	}
+	// section.widget IDX_Omnibar_Widget {
+	// 	form.idx-omnibar-form {
+	// 		input[type=text].idx-omnibar-input, input[type=text].idx-omnibar-input {
+	// 			width: 250px !important;
+	// 		}
+	// 	}
+	// }
+	
 }
 .wrapper-nopad {
 	width: 100%;

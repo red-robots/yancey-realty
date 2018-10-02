@@ -12,12 +12,12 @@ get_header(); ?>
 				<?php
 				while ( have_posts() ) : the_post(); 
 
-				$link = get_field('link_to_buildium');
-				$pay_rent_link = get_field('pay_rent_link');
-				$bbtn = get_field('buildium_button_text');
-				$paybtn = get_field('pay_rent_button');
-				$btitle = get_field('buildium_title_text');
-				$paytitle = get_field('pay_rent_title');
+				// $link = get_field('link_to_buildium');
+				// $pay_rent_link = get_field('pay_rent_link');
+				// $bbtn = get_field('buildium_button_text');
+				// $paybtn = get_field('pay_rent_button');
+				// $btitle = get_field('buildium_title_text');
+				// $paytitle = get_field('pay_rent_title');
 				?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -32,7 +32,20 @@ get_header(); ?>
 				</article><!-- #post-## -->
 
 
-				
+				<div class="prop-manage">
+					<?php if(have_rows('top_links')) : while(have_rows('top_links')) :  the_row();
+							$btntitle = get_sub_field('title');
+							$btnlink = get_sub_field('link');
+							$btntext = get_sub_field('button_text');
+					?>
+					<div class="link">
+						<h3 class=" js-blocks"><?php echo $btntitle; ?></h3>
+						<div class="more">
+							<a href="<?php echo $btnlink; ?>" target="_blank"><?php echo $btntext; ?></a>
+						</div>
+					</div>
+				<?php endwhile; endif; ?>
+				</div>
 
 
 
@@ -48,23 +61,7 @@ get_header(); ?>
 	
 	<div class="wrapper">
 	<div class="prop-manage">
-		<?php if( $link ) { ?>
-			<div class="link">
-				<h3 class=" js-blocks"><?php echo $btitle; ?></h3>
-				<div class="more">
-					<a href="<?php echo $link; ?>" target="_blank"><?php echo $bbtn; ?></a>
-				</div>
-			</div>
-		<?php } ?>
-
-		<?php if( $pay_rent_link ) { ?>
-			<div class="link">
-				<h3 class=" js-blocks"><?php echo $paytitle; ?></h3>
-				<div class="more">
-					<a href="<?php echo $pay_rent_link; ?>" target="_blank"><?php echo $paybtn; ?></a>
-				</div>
-			</div>
-		<?php } ?>
+		
 		</div>
 
 		<section id="idxqs-2" class="widget idxqs">
