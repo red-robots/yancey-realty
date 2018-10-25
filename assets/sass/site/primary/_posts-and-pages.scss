@@ -263,6 +263,10 @@ section.agents, section.resources {
 			width: 100%;
 		}
 	}
+	.title {
+		padding: 3px 0;
+		border-bottom: 1px solid #efefef;
+	}
 	.agent-phone, .agent-email {
 		width: 100%;
 		margin: 5px 0;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Usefull Links
+ * Template Name: Useful Links
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -35,7 +35,7 @@ get_header(); ?>
 				<section class="resources">
 					
 					<?php $args = array(
-			                'post_type'     => 'usefull_link',
+			                'post_type'     => 'useful_link',
 			                'posts_per_page' => -1,
 			            );    
 
@@ -44,29 +44,22 @@ get_header(); ?>
 				            if ( $the_query->have_posts() ) : ?>
 				                <section class="resources">
 				                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
-				                	$name=get_field('name');
-									$title=get_field('title');
-									$cell=get_field('cell');
-									$office=get_field('office');
-									$fax=get_field('fax');
-									$email=get_field('email');
-									$street=get_field('street');
-									$city=get_field('city');
-									$state=get_field('state');
-									$zip=get_field('zip');
+				                	$info=get_field('contact_info');
 									$website=get_field('website');
-									$license=get_field('license');
 									?>
 				                    <div class="resource-card">
 				                    	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				                    	<?php if($name) { ?>
+				                    	<?php if($info) { ?>
 											<div class="item">
-												Name: <?php echo $name; ?>
+												<div class="title">Contact Info</div><br>
+												<?php echo $info; ?>
 											</div>
 										<?php } ?>
 			
 									<?php if($website) { ?>
-				                    	<div class="more"><a href="<?php echo $website; ?>">Visit Website</a></div>
+				                    	<div class="more">
+				                    		<a href="<?php echo $website; ?>" target="_blank">Visit Website</a>
+				                    	</div>
 				                    <?php } ?>
 
 

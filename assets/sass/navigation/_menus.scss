@@ -103,6 +103,9 @@
 			}
 		}
 		@media screen and (min-width: $deskwidth) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: $largewidth) {
 			font-size: 16px;
 		}
 
@@ -121,6 +124,9 @@
 			padding: 0% 20px;
 		}
 		@media screen and (min-width: $deskwidth) {
+			padding: 0% 20px;
+		}
+		@media screen and (min-width: $largewidth) {
 			padding: 0% 30px;
 		}
 		&:hover, &.active {

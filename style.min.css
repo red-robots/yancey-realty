@@ -1310,10 +1310,12 @@ a:hover,a:active{outline:0}
 .main-navigation li{position:relative;text-align:center;display:inline-block;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:0;text-transform:uppercase;font-family:"Oswald",sans-serif;font-weight:300;font-size:16px;width:100%}
 @media screen and (min-width:600px){.main-navigation li{border-left:1px solid #313841;line-height:3;font-size:16px;width:auto}
 .main-navigation li:first-of-type{border:0}
-}@media screen and (min-width:1200px){.main-navigation li{font-size:16px}
+}@media screen and (min-width:1200px){.main-navigation li{font-size:14px}
+}@media screen and (min-width:1435px){.main-navigation li{font-size:16px}
 }.main-navigation a{display:block;text-decoration:none;padding:10px 0;color:#fff;-webkit-transition:all ease .4s;transition:all ease .4s}
 @media screen and (min-width:600px){.main-navigation a{padding:0 20px}
-}@media screen and (min-width:1200px){.main-navigation a{padding:0 30px}
+}@media screen and (min-width:1200px){.main-navigation a{padding:0 20px}
+}@media screen and (min-width:1435px){.main-navigation a{padding:0 30px}
 }.main-navigation a:hover,.main-navigation a.active{background-color:#313841;color:#fff}
 .menu-toggle,.main-navigation.toggled ul{display:block}
 .menu-toggle ul.sub-menu,.main-navigation.toggled ul ul.sub-menu{background-color:rgba(255,255,255,0.1)}
@@ -1543,6 +1545,7 @@ section.agents,section.resources{display:-webkit-box;display:-webkit-flex;displa
 }@media screen and (min-width:1200px){.agent,.resource-card{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
 }.agent .agent-photo,.resource-card .agent-photo{width:100%;margin:0 auto}
 .agent .agent-photo img,.resource-card .agent-photo img{width:100%}
+.agent .title,.resource-card .title{padding:3px 0;border-bottom:1px solid #efefef}
 .agent .agent-phone,.agent .agent-email,.resource-card .agent-phone,.resource-card .agent-email{width:100%;margin:5px 0;color:#313841}
 .agent .agent-phone a,.agent .agent-email a,.resource-card .agent-phone a,.resource-card .agent-email a{color:#313841;text-decoration:none}
 .agent .agent-email,.resource-card .agent-email{font-size:10px}
