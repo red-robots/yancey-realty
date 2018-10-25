@@ -136,7 +136,7 @@ $labels = array(
 
 
      $labels = array(
-  'name' => _x('Usefull Links', 'post type general name'),
+  'name' => _x('Useful Links', 'post type general name'),
     'singular_name' => _x('Link', 'post type singular name'),
     'add_new' => _x('Add New', 'Link'),
     'add_new_item' => __('Add New Link'),
@@ -147,7 +147,7 @@ $labels = array(
     'not_found' =>  __('No Links found'),
     'not_found_in_trash' => __('No Links found in Trash'), 
     'parent_item_colon' => '',
-    'menu_name' => 'Usefull Links'
+    'menu_name' => 'Useful Links'
   );
   $args = array(
   'labels' => $labels,
@@ -156,7 +156,7 @@ $labels = array(
     'show_ui' => true, 
     'show_in_menu' => true, 
     'query_var' => true,
-    'rewrite' => array('slug' => 'usefull-link'),
+    'rewrite' => array('slug' => 'useful-link'),
     'capability_type' => 'post',
     'has_archive' => false, 
     'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
@@ -164,7 +164,7 @@ $labels = array(
     'supports' => array('title','editor','custom-fields','thumbnail'),
   
   ); 
-  register_post_type('usefull_link',$args); // name used in query
+  register_post_type('useful_link',$args); // name used in query
   
   // Add more between here
   
