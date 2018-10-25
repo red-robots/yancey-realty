@@ -1543,7 +1543,8 @@ section.agents,section.resources{display:-webkit-box;display:-webkit-flex;displa
 .agent:before,.resource-card:before{content:\f0d7;position:absolute;top:0;left:40%;width:30px;height:30px}
 @media screen and (min-width:600px){.agent,.resource-card{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;margin:10px auto 30px auto}
 }@media screen and (min-width:1200px){.agent,.resource-card{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
-}.agent .agent-photo,.resource-card .agent-photo{width:100%;margin:0 auto}
+}.agent .item.bump,.resource-card .item.bump{padding-bottom:20px}
+.agent .agent-photo,.resource-card .agent-photo{width:100%;margin:0 auto}
 .agent .agent-photo img,.resource-card .agent-photo img{width:100%}
 .agent .title,.resource-card .title{padding:3px 0;border-bottom:1px solid #efefef}
 .agent .agent-phone,.agent .agent-email,.resource-card .agent-phone,.resource-card .agent-email{width:100%;margin:5px 0;color:#313841}

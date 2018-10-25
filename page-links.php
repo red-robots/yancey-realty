@@ -50,7 +50,7 @@ get_header(); ?>
 				                    <div class="resource-card">
 				                    	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 				                    	<?php if($info) { ?>
-											<div class="item">
+											<div class="item bump">
 												<div class="title">Contact Info</div><br>
 												<?php echo $info; ?>
 											</div>
