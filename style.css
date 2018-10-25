@@ -5135,10 +5135,10 @@ a {
         padding: 0% 20px; } }
     @media screen and (min-width: 1200px) {
       .main-navigation a {
-        padding: 0% 20px; } }
+        padding: 0% 18px; } }
     @media screen and (min-width: 1435px) {
       .main-navigation a {
-        padding: 0% 30px; } }
+        padding: 0% 28px; } }
     .main-navigation a:hover, .main-navigation a.active {
       background-color: #313841;
       color: #fff; }

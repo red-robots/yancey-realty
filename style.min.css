@@ -1314,8 +1314,8 @@ a:hover,a:active{outline:0}
 }@media screen and (min-width:1435px){.main-navigation li{font-size:16px}
 }.main-navigation a{display:block;text-decoration:none;padding:10px 0;color:#fff;-webkit-transition:all ease .4s;transition:all ease .4s}
 @media screen and (min-width:600px){.main-navigation a{padding:0 20px}
-}@media screen and (min-width:1200px){.main-navigation a{padding:0 20px}
-}@media screen and (min-width:1435px){.main-navigation a{padding:0 30px}
+}@media screen and (min-width:1200px){.main-navigation a{padding:0 18px}
+}@media screen and (min-width:1435px){.main-navigation a{padding:0 28px}
 }.main-navigation a:hover,.main-navigation a.active{background-color:#313841;color:#fff}
 .menu-toggle,.main-navigation.toggled ul{display:block}
 .menu-toggle ul.sub-menu,.main-navigation.toggled ul ul.sub-menu{background-color:rgba(255,255,255,0.1)}
