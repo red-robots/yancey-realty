@@ -62,7 +62,7 @@ get_header(); ?>
 				    <h2><?php the_title(); ?></h2>
 				    	<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 				    		
-				    		<?php the_excerpt(); ?>
+				    		<?php //the_excerpt(); ?>
 				    		<div class="more">
 				    			<a href="<?php the_permalink(); ?>">Go</a>
 				    		</div>
