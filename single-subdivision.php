@@ -60,6 +60,21 @@ wp_reset_postdata();
 				<?php the_content(); ?>
 			</div><!-- .entry-content --> 
 
+			<?php if( $IDX ) { ?>
+				<div class="dev-listings">
+				<h2><?php the_title(); ?> Listings</h2>
+					<section class="yan-listing">
+						<!-- <h3>Yancey's Featured <?php the_title(); ?> Listings</h3> -->
+						<?php echo $IDXfeatured; ?>
+					</section>
+					<!-- end featured -->
+					<section class="yan-listing">
+						<!-- <h3>Other <?php the_title(); ?> Listings</h3> -->
+						<?php echo $IDX; ?>
+					</section>
+				</div>
+				<?php } ?>
+
 			<footer class="entry-footer">
 				<?php acstarter_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
