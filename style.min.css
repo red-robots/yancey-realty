@@ -1544,6 +1544,8 @@ section.agents,section.resources{display:-webkit-box;display:-webkit-flex;displa
 @media screen and (min-width:600px){.agent,.resource-card{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;margin:10px auto 30px auto}
 }@media screen and (min-width:1200px){.agent,.resource-card{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
 }.agent .item.bump,.resource-card .item.bump{padding-bottom:20px}
+.agent .clogo,.resource-card .clogo{width:80%;margin:10px auto}
+.agent .clogo img,.resource-card .clogo img{width:100%}
 .agent .agent-photo,.resource-card .agent-photo{width:100%;margin:0 auto}
 .agent .agent-photo img,.resource-card .agent-photo img{width:100%}
 .agent .title,.resource-card .title{padding:3px 0;border-bottom:1px solid #efefef}
@@ -1552,6 +1554,8 @@ section.agents,section.resources{display:-webkit-box;display:-webkit-flex;displa
 .agent .agent-email,.resource-card .agent-email{font-size:10px}
 .agent .more,.resource-card .more{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}
 .agent>*,.resource-card>*{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
+.clogo-single{max-width:250px;margin:10px 0;float:left}
+.clogo-single img{width:100%}
 .resources h3{width:100%;text-align:center;padding:0 0 20px 0;border-bottom:1px solid #ccc}
 .resource-card h4 a{color:#5d8db5}
 .agent-single{width:90%;margin:10px auto;background-color:white;text-align:center;-webkit-transition:all ease .4s;transition:all ease .4s}

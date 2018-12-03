@@ -14,12 +14,33 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		while ( have_posts() ) : the_post(); ?>
+		while ( have_posts() ) : the_post(); 
+			$name=get_field('name');
+			$title=get_field('title');
+			$cell=get_field('cell');
+			$office=get_field('office');
+			$fax=get_field('fax');
+			$email=get_field('email');
+			$street=get_field('street');
+			$city=get_field('city');
+			$state=get_field('state');
+			$zip=get_field('zip');
+			$website=get_field('website');
+			$license=get_field('license');
+			$desc=get_field('company_description');
+			$logo=get_field('logo');
+				?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
+				<?php if($logo) { ?>
+					<div class="clogo-single">
+						<img src="<?php echo $logo['url']; ?>">
+					</div>
+					<div class="clear"></div>
+				<?php } ?>
 				 
 				<div class="entry-meta">
 					<?php //acstarter_posted_on(); ?>
@@ -28,23 +49,7 @@ get_header(); ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<?php 
-
-				the_content(); 
-
-				$name=get_field('name');
-				$title=get_field('title');
-				$cell=get_field('cell');
-				$office=get_field('office');
-				$fax=get_field('fax');
-				$email=get_field('email');
-				$street=get_field('street');
-				$city=get_field('city');
-				$state=get_field('state');
-				$zip=get_field('zip');
-				$website=get_field('website');
-				$license=get_field('license');
-?>
+				<?php the_content(); ?>
 
 			<?php if($name) { ?>
 				<div class="item">
@@ -93,6 +98,12 @@ get_header(); ?>
 			<?php if($license) { ?>
 				<div class="item">
 					License: <?php echo $license; ?>
+				</div>
+			<?php } ?>
+
+			<?php if($desc) { ?>
+				<div class="item">
+					<?php echo $desc; ?>
 				</div>
 			<?php } ?>
 

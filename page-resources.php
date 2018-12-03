@@ -90,10 +90,21 @@ get_header(); ?>
 									$zip=get_field('zip');
 									$website=get_field('website');
 									$license=get_field('license');
+									//$desc=get_field('company_description');
+									$logo=get_field('logo');
+
 									?>
-				                    <div class="resource-card">
-				                    	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				                    	<?php if($name) { ?>
+            <div class="resource-card">
+            	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+            	<?php if($logo) { ?>
+					<div class="clogo">
+						<img src="<?php echo $logo['url']; ?>">
+					</div>
+				<?php } ?>
+
+				
+			<?php if($name) { ?>
 				<div class="item">
 					Name: <?php echo $name; ?>
 				</div>
