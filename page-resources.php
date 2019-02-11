@@ -149,7 +149,7 @@ get_header(); ?>
 				</div>
 			<?php } ?>
 									<?php if($website) { ?>
-				                    	<div class="more"><a href="<?php echo $website; ?>">Visit Website</a></div>
+				                    	<div class="more"><a target="_blank"> href="<?php echo $website; ?>">Visit Website</a></div>
 				                    <?php } ?>
 
 

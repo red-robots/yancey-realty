@@ -24,6 +24,12 @@
     	$facebook = get_field('facebook_link');
     	$twitter = get_field('twitter_link');
     	$instagram = get_field('instagram_link');
+    	$button_text = get_field('button_text');
+    	if($button_text != '') {
+    		$btnText = $button_text;
+    	} else {
+    		$btnText = 'Agent Info';
+    	}
 
     	if( $linkedin || $facebook || $twitter || $instagram ) {
     		$links = 'yes';
