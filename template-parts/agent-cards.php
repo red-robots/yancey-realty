@@ -98,7 +98,7 @@
 	    		 <?php endif; ?>
 	    	</ul>
 	   
-	    <div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
+	    <div class="more"><a href="<?php the_permalink(); ?>"><?php echo $btnText; ?></a></div>
     </div>
 
 
