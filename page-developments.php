@@ -83,9 +83,9 @@ get_header(); ?>
 	    <div class="development ">
 	    	<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 	    		<h2><?php the_title(); ?></h2>
-	    		<?php the_excerpt(); ?>
+	    		<?php //the_excerpt(); ?>
 	    		<div class="more">
-	    			<a href="<?php the_permalink(); ?>">Go</a>
+	    			<a href="<?php the_permalink(); ?>">More Information</a>
 	    		</div>
 	    </div>
 		<?php endwhile; ?>
