@@ -1292,7 +1292,7 @@ textarea{padding-left:3px;width:100%}
 .prop-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsFieldWrap #IDX-quicksearchForm-12569 .IDX-qsSelectInput select,.rental-search .IDX-quicksearchWrapper .IDX-quicksearchForm .IDX-qsFieldWrap #IDX-quicksearchForm-12569 .IDX-qsSelectInput select{width:100% !important}
 .IDX-qsFieldWrap{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
 @media screen and (min-width:900px){.IDX-qsFieldWrap{-webkit-flex-basis:15%;-ms-flex-preferred-size:15%;flex-basis:15%;display:block}
-}select{border-radius:0;padding:0 25px 0 5px;background:url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;height:34px;overflow:hidden;background-color:#fff}
+}select{border-radius:0;padding:0 25px 0 5px;height:34px;overflow:hidden;background-color:#fff}
 a{color:#0999f3}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
