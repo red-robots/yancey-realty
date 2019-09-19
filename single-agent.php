@@ -101,39 +101,40 @@ $taxonomy = sanitize_title_with_dashes($agent);
 		</div><!-- #primary -->
 		<div class="content-area-half-right">
 			<div class="agent-blog">
-	    		<h2><?php echo $agent; ?> Blog</h2>
+	    		<h2>Contact <?php echo $agent; ?></h2>
+	    		<?php echo do_shortcode('[gravityform id="4" title="false" description="false"]'); ?>
 	    		<?php
-					$wp_query = new WP_Query();
-					$wp_query->query(array(
-					'post_type'=>'post',
-					'posts_per_page' => 10,
-					'paged' => $paged,
-					'tax_query' => array(
-						array(
-							'taxonomy' => 'category', // your custom taxonomy
-							'field' => 'slug',
-							'terms' => array( $taxonomy ) // the terms (categories) you created
-						)
-					)
-				));
-				if ($wp_query->have_posts()) : ?>
-				<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+				// 	$wp_query = new WP_Query();
+				// 	$wp_query->query(array(
+				// 	'post_type'=>'post',
+				// 	'posts_per_page' => 10,
+				// 	'paged' => $paged,
+				// 	'tax_query' => array(
+				// 		array(
+				// 			'taxonomy' => 'category', // your custom taxonomy
+				// 			'field' => 'slug',
+				// 			'terms' => array( $taxonomy ) // the terms (categories) you created
+				// 		)
+				// 	)
+				// ));
+				// if ($wp_query->have_posts()) : ?>
+				<?php //while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-					<article class="post">
+					<!-- <article class="post">
 						<h2><?php the_title(); ?></h2>
 						<?php the_excerpt(); ?>
 						<div class="readmore">
 							<a href="<?php the_permalink(); ?>">Read More</a>
 						</div>
-					</article>
+					</article> -->
 
-				<?php endwhile; ?>
-				<div class="readmore">
+				<?php //endwhile; ?>
+				<!-- <div class="readmore">
 					<a href="<?php echo $url . '/category/' . $taxonomy; ?>">
 						View All posts by, <?php echo $agent; ?>
 					</a>
-				</div>
-			<?php endif; ?>
+				</div> -->
+			<?php //endif; ?>
 	    	</div>
 		</div>
 		<!-- content-area-half-left -->
