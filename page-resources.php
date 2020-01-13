@@ -114,6 +114,11 @@ get_header(); ?>
 					Title: <?php echo $title; ?>
 				</div>
 			<?php } ?>
+		    	<?php if($license) { ?>
+				<div class="item">
+					License: <?php echo $license; ?>
+				</div>
+			<?php } ?>
 			<?php if($cell) { ?>
 				<div class="item">
 					Cell: <?php echo $cell; ?>
@@ -143,11 +148,7 @@ get_header(); ?>
 					<?php if($city){echo $city;} ?> <?php if($state){echo ', '.$state;} ?> <?php if($zip){echo $zip;} ?>
 				</div>
 			<?php } ?>
-			<?php if($license) { ?>
-				<div class="item">
-					License: <?php echo $license; ?>
-				</div>
-			<?php } ?>
+			
 									<?php if($website) { ?>
 				                    	<div class="more"><a target="_blank" href="<?php echo $website; ?>">Visit Website</a></div>
 				                    <?php } ?>
