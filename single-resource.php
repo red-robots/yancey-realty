@@ -61,6 +61,11 @@ get_header(); ?>
 					Title: <?php echo $title; ?>
 				</div>
 			<?php } ?>
+			<?php if($license) { ?>
+				<div class="item">
+					License: <?php echo $license; ?>
+				</div>
+			<?php } ?>
 			<?php if($cell) { ?>
 				<div class="item">
 					Cell: <?php echo $cell; ?>
@@ -95,11 +100,7 @@ get_header(); ?>
 					Website: <a target="_blank" href="<?php echo $website; ?>"><?php echo $website; ?></a>
 				</div>
 			<?php } ?>
-			<?php if($license) { ?>
-				<div class="item">
-					License: <?php echo $license; ?>
-				</div>
-			<?php } ?>
+			
 
 			<?php if($desc) { ?>
 				<div class="item">
