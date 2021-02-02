@@ -288,6 +288,19 @@ button.menu-toggle {
 			padding: 0% 30px;
 		}
 	}
+	.menu-subnav-container {
+		width: auto;
+		display: inline-block;
+	}
+	.wrapper {
+		@media screen and (min-width: $tabwidth) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+	}
 }
 
 

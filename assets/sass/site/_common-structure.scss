@@ -48,9 +48,9 @@ a {text-decoration: none;}
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: auto;
-		position: absolute;
-		right: 0;
-		top: 5px;
+		// position: absolute;
+		// right: 0;
+		// top: 5px;
 		margin: 0;
 	}
 	.idx-omnibar-form {
@@ -68,6 +68,9 @@ a {text-decoration: none;}
 	}
 	.idx-omnibar-form button {
 		width: 70px;
+	}
+	.widget {
+		margin: 0;
 	}
 	// section.widget IDX_Omnibar_Widget {
 	// 	form.idx-omnibar-form {
@@ -382,4 +385,25 @@ body.single {
 		}
 	}
 	
+}
+@keyframes glowing {
+	0% {
+		background-color: $color-blue;
+		box-shadow: 0 0 5px $color-blue;
+	}
+	50% {
+		background-color: #aed7f9;
+		box-shadow: 0 0 20px #aed7f9;
+	}
+	100% {
+		background-color: $color-blue;
+		box-shadow: 0 0 5px $color-blue;
+	}
+}
+a.cash-offers {
+	width: auto;
+	padding: 5px 15px;
+	background-color: $color-blue;
+	color: #fff;
+	animation: glowing 1300ms infinite;
 }
