@@ -37,7 +37,7 @@
     	// $bio = get_field('bio');
 
     	// echo '<pre>';
-    	// print_r($photo);
+    	// print_r($links);
     	// echo '</pre>';
 
     ?>
@@ -66,7 +66,7 @@
     	
     	
 	    	<ul class="agent-social">
-	    	<?php if( $links == 'yes') : ?>
+	    	<?php //if( $links == 'yes') : ?>
 	    		<?php if($facebook) { ?>
 	    			<li>
 		    			<a target="_blank" href="<?php echo $facebook; ?>">
@@ -95,7 +95,7 @@
 		    			</a>
 	    			</li>
 	    		<?php } ?>
-	    		 <?php endif; ?>
+	    		 <?php //endif; ?>
 	    	</ul>
 	   
 	    <div class="more"><a href="<?php the_permalink(); ?>"><?php echo $btnText; ?></a></div>
