@@ -997,7 +997,9 @@ input.gform_button:hover{background-color:#313841;-webkit-box-shadow:none;box-sh
 body.single .IDX-showcaseTable .IDX-showcaseContainer{padding:5% !important;border:0 !important;-webkit-transform:scale(1);transform:scale(1);background-color:#fff;position:relative;z-index:1;-webkit-transition:all ease .2s;transition:all ease .2s}
 body.single .IDX-showcaseTable .IDX-showcasePhoto{width:100%}
 body.single .IDX-showcaseTable .IDX-showcaseContainer:hover{-webkit-transform:scale(1.05);transform:scale(1.05);z-index:2}
-a.cash-offers{width:auto;padding:5px 15px;background-color:#5d8db5;color:#fff;-webkit-animation:glowing 1300ms infinite;animation:glowing 1300ms infinite}
+a.cash-offers{width:auto;padding:5px 15px;background-color:#5d8db5;color:#fff;-webkit-animation:glowing 1300ms infinite;animation:glowing 1300ms infinite;margin-bottom:10px}
+a.insurance{width:auto;padding:5px 15px;background-color:#5d8db5;color:#fff}
+.center{text-align:center}
 .IDX-resultsCountMessage{display:none}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
@@ -1139,6 +1141,7 @@ button.menu-toggle{display:none}
 .content-area-half-right{width:45%;float:right;margin:0}
 .widget-area{width:26%;float:right;margin:0}
 .site-info .col{width:auto;text-align:left}
+a.cash-offers{margin-bottom:0}
 .prop-search form.homesearch select,.propsearch-page form.homesearch select,.rental-search form.homesearch select{width:100%}
 h2.tagline{position:absolute;top:10%;left:0;color:#fff;font-size:40px;text-shadow:1px 1px 2px #969696}
 .agent,.resource-card{-ms-flex-preferred-size:45%;flex-basis:45%;margin:10px auto 30px auto}

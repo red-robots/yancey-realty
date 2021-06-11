@@ -406,4 +406,17 @@ a.cash-offers {
 	background-color: $color-blue;
 	color: #fff;
 	animation: glowing 1300ms infinite;
+	margin-bottom: 10px;
+	@media screen and (min-width: $tabwidth) {
+		margin-bottom: 0px;
+	}
+}
+a.insurance {
+	width: auto;
+	padding: 5px 15px;
+	background-color: $color-blue;
+	color: #fff;
+}
+.center {
+	text-align: center;
 }
