@@ -6,6 +6,14 @@
 	'orderby' => 'menu_order',
 	'order' => 'ASC',
 	'paged' => $paged,
+	'tax_query' => array(
+	   array(
+	    'taxonomy' => 'type',
+	    'field'    => 'slug',
+	    'terms'    => array( 'property-manager' ),
+	    'operator' => 'NOT IN',
+	   )
+	)
 ));
 	if ($wp_query->have_posts()) : ?>
 

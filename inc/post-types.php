@@ -223,6 +223,19 @@ function build_taxonomies() {
   ) );
 
 
+register_taxonomy( 'type', 'agent',
+   array( 
+  'hierarchical' => true, // true = acts like categories false = acts like tags
+  'label' => 'Agent Type', 
+  'query_var' => true, 
+  'rewrite' => true ,
+  'show_admin_column' => true,
+  'public' => true,
+  'rewrite' => array( 'slug' => 'type' ),
+  '_builtin' => true
+  ) );
+
+
   register_taxonomy( 'resource_type', 'resource',
    array( 
   'hierarchical' => true, // true = acts like categories false = acts like tags
