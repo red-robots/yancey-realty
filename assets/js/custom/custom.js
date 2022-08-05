@@ -15,6 +15,9 @@ jQuery(document).ready(function ($) {
 	});
 
 
+	$('label#IDX-qsIdxIDLabel-12569').html('Select an Area');
+
+
 	/*
 	*
 	*	Current Page Active

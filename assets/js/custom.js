@@ -12,6 +12,7 @@ jQuery(document).ready(function ($) {
   $("input[type=text].idx-omnibar-input").on('click focusin', function () {
     this.value = '';
   });
+  $('label#IDX-qsIdxIDLabel-12569').html('Select an Area');
   /*
   *
   *	Current Page Active
