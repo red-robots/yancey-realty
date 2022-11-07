@@ -92,6 +92,7 @@ $phoneT = get_field('main_phone_2', 'option');
 				<?php //get_template_part('template-parts/offer-btn'); ?>
 				<!-- <a class="cash-offers" href="https://zavvie.com/yanceyrealty/offers" target="_blank">Get Cash Offers</a> -->
 				<a class="insurance" href="http://www.yanceyinsurance.com/" target="_blank">Yancey Insurance Quote</a>
+				<a class="insurance red" href="https://app.rosegatemortgage.com/app/signup/p/rosegatemortgage/brittneymorris?campaign=yanceyrealty" target="_blank">Get Pre-Approved</a>
 				<!-- <form>
 		        <button target="_blank" class="color1" type="submit" formaction="https://zavvie.com/yanceyrealty/offers" style="background-color: #E31E1A; text-align:center; line-height: 36px; font-size: 14px; color:#fff; font-family: 'roboto', 'helvetica', 'arial', sans-serif; border-radius: 2px; padding: 0 16px; border:none;">Get Cash Offers</button>
 		        </form> -->

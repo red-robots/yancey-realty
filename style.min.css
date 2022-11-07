@@ -999,6 +999,7 @@ body.single .IDX-showcaseTable .IDX-showcasePhoto{width:100%}
 body.single .IDX-showcaseTable .IDX-showcaseContainer:hover{-webkit-transform:scale(1.05);transform:scale(1.05);z-index:2}
 a.cash-offers{width:auto;padding:5px 15px;background-color:#5d8db5;color:#fff;-webkit-animation:glowing 1300ms infinite;animation:glowing 1300ms infinite;margin-bottom:10px}
 a.insurance{width:auto;padding:5px 15px;background-color:#5d8db5;color:#fff}
+a.insurance.red{background-color:#e31d1a}
 .center{text-align:center}
 .IDX-resultsCountMessage{display:none}
 .sticky{display:block}

@@ -416,6 +416,9 @@ a.insurance {
 	padding: 5px 15px;
 	background-color: $color-blue;
 	color: #fff;
+	&.red {
+		background-color: $color-red;
+	}
 }
 .center {
 	text-align: center;
