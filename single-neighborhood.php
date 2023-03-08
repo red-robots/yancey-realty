@@ -121,6 +121,7 @@ wp_reset_postdata();
 	</div><!-- #primary -->
 
 	<aside id="secondary" class="widget-area" role="complementary">
+		<?php if($post_objects): ?>
 		<div class="widget">
 		<?php 
 		wp_reset_query();
@@ -206,7 +207,8 @@ wp_reset_postdata();
 			    <?php endif; ?>
 	    	<div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
     	</div>
-    	<?php endforeach; wp_reset_postdata(); ?>
+    	<?php endforeach; wp_reset_postdata(); 
+    	endif;?>
 			
 		</div>
 		<?php 
