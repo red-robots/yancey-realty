@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
 			e.preventDefault();
 			$(this).toggleClass('show');
 			$('#SEARCH-FORM').toggleClass('show');
-			$('#SEARCH-FORM input.search-field').focus();
+			//$('#SEARCH-FORM input.search-field').focus();
 		});
 
 });
