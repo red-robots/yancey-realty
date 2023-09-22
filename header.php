@@ -80,13 +80,21 @@ $phoneT = get_field('main_phone_2', 'option');
 	        	<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
+
 				</nav><!-- #site-navigation -->
 
 
 	        </section>
+		</div><!-- wrapper -->
 
-
-	</div><!-- wrapper -->
+		<div id="SEARCH-FORM" class="siteSearchForm">
+			<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<label for="search"><?php _e( 'Search&hellip;', 'acstarter' ); ?></label>
+				<input type="search" id="search" class="search-field" value="<?php echo get_search_query(); ?>" name="s" placeholder="Search here..." />
+				<button type="submit" class="search-submit" aria-label="Submit Search"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content ">

@@ -1,12 +1,12 @@
 /**
  *	Custom jQuery Scripts
- *	
- *	Developed by: Austin Crane	
+ *
+ *	Developed by: Austin Crane
  *	Designed by: Austin Crane
  */
 
 jQuery(document).ready(function ($) {
-	
+
 
 	$("label[for='omnibar']").text("Search by Zip");
 	$("input[type=text].idx-omnibar-input").val("Search by Zip");
@@ -42,13 +42,13 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	var $all_oembed_videos = $("iframe[src*='youtube']");
-	
+
 	$all_oembed_videos.each(function() {
-	
+
 		$(this).removeAttr('height').removeAttr('width').wrap( "<div class='embed-container'></div>" );
- 	
+
  	});
-	
+
 	/*
 	*
 	*	Flexslider
@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
 	$('.flexslider').flexslider({
 		animation: "slide",
 	}); // end register flexslider
-	
+
 	/*
 	*
 	*	Colorbox
@@ -65,10 +65,10 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	$('a.gallery').colorbox({
 		rel:'gal',
-		width: '80%', 
+		width: '80%',
 		height: '80%'
 	});
-	
+
 	/*
 	*
 	*	Isotope with Images Loaded
@@ -89,15 +89,33 @@ jQuery(document).ready(function ($) {
 	*	Smooth Scroll to Anchor
 	*
 	------------------------------------*/
-	 $('a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 500);
-	    return false;
-	});
+	$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href="#search"]').click(function (event) {
+		if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname
+    ) {
 
-	
-	
+			var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+			if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus();
+          };
+        });
+      }
+		}
+  });
+
+
 	/*
 	*
 	*	Equal Heights Divs

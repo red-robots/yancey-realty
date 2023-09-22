@@ -2,8 +2,8 @@
 
 /**
  *	Custom jQuery Scripts
- *	
- *	Developed by: Austin Crane	
+ *
+ *	Developed by: Austin Crane
  *	Designed by: Austin Crane
  */
 jQuery(document).ready(function ($) {
@@ -82,11 +82,30 @@ jQuery(document).ready(function ($) {
   *
   ------------------------------------*/
 
-  $('a').click(function () {
-    $('html, body').animate({
-      scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-    }, 500);
-    return false;
+  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href="#search"]').click(function (event) {
+		if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname
+    ) {
+
+			var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+			if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus();
+          };
+        });
+      }
+		}
   });
   /*
   *
