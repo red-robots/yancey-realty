@@ -30,7 +30,7 @@ function acstarter_scripts() {
 	wp_enqueue_script(
 		'acstarter-extrajs',
 		get_template_directory_uri() . '/assets/js/extra.js',
-		array(), '20120207',
+		array(), '20220922',
 		true
 	);
 
