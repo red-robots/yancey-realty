@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
 			$(this).toggleClass('show');
 			$(this).parent().toggleClass('show');
 			$('#SEARCH-FORM').toggleClass('show');
-			//$('#SEARCH-FORM input.search-field').focus();
+			$('#SEARCH-FORM input.search-field').focus();
 		});
 
 });
