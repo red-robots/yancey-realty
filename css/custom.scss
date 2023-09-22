@@ -1,0 +1,63 @@
+$primary: #5d8db5;
+$secondary: #e31d1a;
+a {
+	transition: all ease .3s;
+}
+ul#primary-menu > li {
+	position: relative;
+}
+ul#primary-menu li ul {
+	display: none;
+	width: 250px;
+	position: absolute;
+	top: 47px;
+	left: 0;
+	background-color: #313841;
+	padding: 0 0;
+	animation-fill-mode: both;
+	animation-duration: .5s
+}
+ul#primary-menu li ul li {
+	display: block;
+	border-left: none;
+	margin: 0 0;
+	a {
+		display: block;
+    width: 100%;
+    padding: 8px 28px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.4;
+	}
+}
+ul#primary-menu > li:hover > a,
+ul#primary-menu > li:focus > a {
+	background-color: #313841;
+}
+ul#primary-menu li ul li:hover a {
+	background-color: $secondary;
+	color: #FFF;
+}
+ul#primary-menu li ul li.current_page_item a,
+ul#primary-menu li ul li.current_page_item:hover a {
+	background-color: transparent!important;
+	opacity: 0.35;
+}
+
+ul#primary-menu > li.menu-item-has-children:hover > ul {
+	display: block;
+  animation-name: dropDownAnimation
+}
+
+@keyframes dropDownAnimation {
+	from {
+			opacity: 0;
+			transform: translate3d(0,10px,0);
+			transition: left 0s .2s linear,transform 0s .2s linear,opacity .2s ease-out
+	}
+	to {
+			opacity: 1;
+			transform: translate3d(0,0,0);
+			transition: left 0s linear,transform .2s ease-out,opacity .2s ease-out
+	}
+}
