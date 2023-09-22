@@ -2,7 +2,7 @@
 /**
  * Custom theme functions.
  *
- * 
+ *
  *
  * @package ACStarter
  */
@@ -41,9 +41,9 @@ add_image_size( 'agent', 400, 400, array( 'center', 'top' ) );
 /*-------------------------------------
 	Favicon.
 ---------------------------------------*/
-function mytheme_favicon() { 
- echo '<link rel="shortcut icon" href="' . get_bloginfo('stylesheet_directory') . '/images/favicon.ico" >'; 
-} 
+function mytheme_favicon() {
+ echo '<link rel="shortcut icon" href="' . get_bloginfo('stylesheet_directory') . '/images/favicon.ico" >';
+}
 add_action('wp_head', 'mytheme_favicon');
 
 /*-------------------------------------
@@ -86,29 +86,29 @@ add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
   But always use this to get the custom formats
 
 */
- 
-function my_mce_before_init_insert_formats( $init_array ) {  
- 
+
+function my_mce_before_init_insert_formats( $init_array ) {
+
 // Define the style_formats array
- 
-  $style_formats = array(  
+
+  $style_formats = array(
     // Each array child is a format with it's own settings
-    
+
     // A block element
-    array(  
-      'title' => 'Block Color',  
-      'block' => 'span',  
+    array(
+      'title' => 'Block Color',
+      'block' => 'span',
       'classes' => 'custom-color-block',
       'wrapper' => true,
-      
+
     ),
     // inline color
-    array(  
-      'title' => 'Custom Color',  
-      'inline' => 'span',  
+    array(
+      'title' => 'Custom Color',
+      'inline' => 'span',
       'classes' => 'custom-color',
       'wrapper' => true,
-      
+
     ),
      array(
         'title' => 'Header 2',
@@ -123,15 +123,15 @@ function my_mce_before_init_insert_formats( $init_array ) {
         'title' => 'Paragraph',
         'format' => 'p'
     )
-  );  
+  );
   // Insert the array, JSON ENCODED, into 'style_formats'
-  $init_array['style_formats'] = json_encode( $style_formats );  
-  
-  return $init_array;  
-  
-} 
-// Attach callback to 'tiny_mce_before_init' 
-add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
+  $init_array['style_formats'] = json_encode( $style_formats );
+
+  return $init_array;
+
+}
+// Attach callback to 'tiny_mce_before_init'
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 // Add styles to WYSIWYG in your theme's editor-style.css file
 function my_theme_add_editor_styles() {
     add_editor_style( 'editor-style.css' );
@@ -176,10 +176,12 @@ function ac_first_and_last_menu_class($items) {
   foreach($items as $k => $v){
     $parent[$v->menu_item_parent][] = $v;
   }
-  foreach($parent as $k => $v){
-    $v[0]->classes[] = 'first';
-    $v[count($v)-1]->classes[] = 'last';
-  }
+	if( isset($parent) && $parent ) {
+		foreach($parent as $k => $v){
+			$v[0]->classes[] = 'first';
+			$v[count($v)-1]->classes[] = 'last';
+		}
+	}
   return $items;
 }
 add_filter('wp_nav_menu_objects', 'ac_first_and_last_menu_class');

@@ -21,7 +21,7 @@
 <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-87DrmpqHRiY8hPLIr7ByqhPIywuSsjuQAfMXAE0sMUpY3BM7nXjf+mLIUSvhDArs" crossorigin="anonymous"> -->
 <script src="https://kit.fontawesome.com/30f45b415e.js" crossorigin="anonymous"></script>
 
-<?php wp_head(); 
+<?php wp_head();
 
 $street = get_field('street_address', 'option');
 $city = get_field('city', 'option');
@@ -62,7 +62,7 @@ $phoneT = get_field('main_phone_2', 'option');
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="wrapper flexwrap">
-			
+
 			<?php if(is_home()) { ?>
 	            <h1 class="logo">
 		            <a href="<?php bloginfo('url'); ?>">
@@ -82,26 +82,11 @@ $phoneT = get_field('main_phone_2', 'option');
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
-				
+
 	        </section>
-			
+
 
 	</div><!-- wrapper -->
-		<nav class="b-nav">
-			<div class="wrapper center">
-				<?php //get_template_part('template-parts/offer-btn'); ?>
-				<!-- <a class="cash-offers" href="https://zavvie.com/yanceyrealty/offers" target="_blank">Get Cash Offers</a> -->
-				<a class="insurance" href="http://www.yanceyinsurance.com/" target="_blank">Yancey Insurance Quote</a>
-				<a class="insurance red" href="https://apply.lodasoft.com/register?companyGuid=42fa2c80-0ee4-4a55-890f-86e54748ddae&userGuid=eff637c2-ff79-4bfb-8e14-38ab649b6a5d&flowGuid=b02ac0c1-4cd7-4211-9ab4-2dd4e05739b2&referralSource=68638 target="_blank">Get Pre-Approved</a>
-				<!-- <form>
-		        <button target="_blank" class="color1" type="submit" formaction="https://zavvie.com/yanceyrealty/offers" style="background-color: #E31E1A; text-align:center; line-height: 36px; font-size: 14px; color:#fff; font-family: 'roboto', 'helvetica', 'arial', sans-serif; border-radius: 2px; padding: 0 16px; border:none;">Get Cash Offers</button>
-		        </form> -->
-				<?php wp_nav_menu( array( 'theme_location' => 'subnav' ) ); ?>
-				<div class="zip-search">
-					<?php if ( is_active_sidebar( 'sidebar-search' ) ) {dynamic_sidebar( 'sidebar-search' );} ?>
-				</div>
-			</div>
-		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content ">

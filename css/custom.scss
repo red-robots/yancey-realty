@@ -46,7 +46,7 @@ ul#primary-menu li ul li.current_page_item:hover a {
 
 ul#primary-menu > li.menu-item-has-children:hover > ul {
 	display: block;
-  animation-name: dropDownAnimation
+  animation-name: dropDownAnimation;
 }
 
 @keyframes dropDownAnimation {
@@ -59,5 +59,25 @@ ul#primary-menu > li.menu-item-has-children:hover > ul {
 			opacity: 1;
 			transform: translate3d(0,0,0);
 			transition: left 0s linear,transform .2s ease-out,opacity .2s ease-out
+	}
+}
+
+
+@media screen and (max-width: 599px) {
+	ul#primary-menu > li {
+		margin-top: 1px;
+		margin-bottom: 1px;
+	}
+	ul#primary-menu li ul {
+		position: relative!important;
+		top: 0!important;
+		width: 100%;
+		text-align: center;
+		li a {
+			text-align: center;
+		}
+	}
+	ul#primary-menu > li.menu-item-has-children:hover > ul {
+		animation: none;
 	}
 }
