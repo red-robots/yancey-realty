@@ -66,10 +66,23 @@ ul#primary-menu li > a[href="#search"] {
 		color: #FFF;
 	}
 	&.show {
+		background-color: #313841;
 		i:before {
 			content: "\f00d";
 		}
 	}
+}
+ul#primary-menu li.show {
+	// &:after {
+	// 	content:"";
+	// 	display: block;
+	// 	width: 100%;
+	// 	height: 20px;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	bottom: -20px;
+	// 	background-color: #313841;
+	// }
 }
 
 header#masthead {
@@ -78,17 +91,18 @@ header#masthead {
 }
 .siteSearchForm {
 	position: absolute;
-	right: 0;
-	bottom: -70px;
+	right: 5vw;
+	bottom: -60px;
+	max-width: 400px;
 	width: 100%;
 	background: rgba(0,0,0,.5);
 	display: none;
 	animation-fill-mode: both;
 	animation-duration: .5s;
 	.search-form-wrap {
-		width: 90%;
+		width: 100%;
 		margin: 0 auto;
-		padding: 15px 30px;
+		padding: 10px 10px;
 		position: relative;
 		@media screen and (max-width: 600px) {
 			width: 100%;
@@ -113,13 +127,14 @@ header#masthead {
 		}
 		.search-submit {
 			position: absolute;
-			top: 13px;
-			right: 29px;
+			top: 9px;
+			right: 10px;
 			z-index: 10;
 			background-color: transparent;
 			border: none;
 			font-size: 18px;
-			opacity: 0.5;
+			opacity: .5;
+			border-radius: 200px;
 		}
 	}
 	label {
