@@ -1,5 +1,5 @@
-$primary: #5d8db5;
-$secondary: #e31d1a;
+﻿$primary: #e31d1a;
+$secondary: #5d8db5;
 
 a {
 	transition: all ease .3s;
@@ -36,7 +36,7 @@ ul#primary-menu > li:focus > a {
 	background-color: #313841;
 }
 ul#primary-menu li ul li:hover a {
-	background-color: $secondary;
+	background-color: $primary;
 	color: #FFF;
 }
 ul#primary-menu li ul li.current_page_item a,
@@ -160,6 +160,99 @@ header#masthead {
 }
 
 
+.home-banner {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+  .hero-image {
+    margin: 0 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: zoom-in-zoom-out 40s ease-in-out infinite;
+  }
+}
+
+.home-featured-block {
+  .contentRow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .imageCol, .textCol {
+    width: 100%;
+  }
+  .textCol p:last-child {
+    margin-bottom: 0;
+  }
+  .imageCol {
+    min-height: 15em;
+    background-color: #000;
+    figure {
+      width: 100%;
+      height: 100%;
+      margin: 0 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &.full {
+    .textCol {
+      max-width: 1300px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 30px;
+    }
+  }
+  &.half {
+    .imageCol, .textCol {
+      width: 50%;
+    }
+
+    .textCol {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 8vw 5vw;
+      @media screen and (max-width: 1024px) {
+        padding: 40px 20px;
+      }
+    }
+  }
+
+  .buttons {
+    margin-top: 30px;
+  }
+  .theme-button {
+    display: inline-block;
+    background: $primary;
+    color: #FFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    &:hover, &:focus {
+      background: $secondary;
+    }
+  }
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.4, 1.4);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 
 @media screen and (max-width: 599px) {
 	ul#primary-menu > li {

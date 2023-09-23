@@ -18,33 +18,56 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 
-	<div class="hero">
-		<img src="<?php bloginfo('template_url'); ?>/images/carolina-mashup.png" alt="">
+  <?php  
+  $heroImage = get_field('static_banner',2);
+  $heroText = get_field('static_banner_text',2);
+  ?>
 
-		<h2 class="tagline">
-			<?php bloginfo('description'); ?>
-		</h2>
-
+	<div class="home-banner">
+    <?php if($heroImage) { ?><figure class="hero-image" style="background-image:url('<?php echo $heroImage['url']?>')"></figure><?php } ?>
+    <?php if($heroText) { ?><h2 class="tagline"><?php bloginfo('description'); ?></h2><?php } ?>
 		<div class="prop-search">
 			<?php 
 			get_template_part('inc/home-property-search');
 			//if ( is_active_sidebar( 'sidebar-search' ) ) {dynamic_sidebar( 'sidebar-search' );} ?>
 		</div>
-
-		
-
 	</div>
 
-	<section class="grey-bg common">
-		<section class="agents-home">
-			<div class="wrapper">
-				<h2>Our Agents</h2>
-				<?php get_template_part('template-parts/agent-cards'); ?>
-			</div>
-		</section>
-	</section>
 
-	<section class="home-featured-listings common">
+  <?php
+  $image_block = get_field('image_block',2);
+  $text_block = get_field('text_block',2);
+  $button = get_field('buttons_block',2);
+  $buttonLink = ( isset($button['url']) && $button['url'] ) ? $button['url'] : '';
+  $buttonText = ( isset($button['title']) && $button['title'] ) ? $button['title'] : '';
+  $buttonTarget = ( isset($button['target']) && $button['target'] ) ? $button['target'] : '_self';
+  $colClass = ( $image_block && $text_block ) ? 'half':'fullwidth';
+  if( $image_block || $text_block ) { ?>
+  <section class="home-featured-block <?php echo $colClass ?>">
+    <div class="contentRow">
+
+      <?php if($image_block) { ?>
+      <div class="imageCol"><figure style="background-image:url('<?php echo $image_block['url']?>')"></figure></div>
+      <?php } ?>
+
+      <?php if($text_block) { ?>
+      <div class="textCol">
+        <div class="textInner">
+          <div class="text"><?php echo $text_block; ?></div>
+          <?php if($buttonLink && $buttonText) { ?>
+          <div class="buttons">
+            <a href="<?php echo $buttonLink?>" class="theme-button" target="<?php echo $buttonTarget?>"><?php echo $buttonText?></a>
+          </div>
+          <?php } ?>
+        </div>
+      </div>
+      <?php } ?>
+
+    </div>
+  </section>
+  <?php } ?>
+	
+  <section class="home-featured-listings common">
 		<div class="wrapper">
 			<h2>Featured Listings</h2>
 			<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-12572" src="//yanceyrealty.idxbroker.com/idx/customshowcasejs.php?widgetid=12572"></script>
