@@ -50,7 +50,8 @@ $mphone = get_field('main_phone_2', 'option');
 				<h2>Charlotte Address</h2>
 				<?php echo get_bloginfo('name').'<br>'; ?>
 				<?php if($street) {echo $street . '<br>';} ?>
-				<?php if($city) {echo $city. ', '.$state.' '.$zip;} ?>
+				<?php if($city) {echo $city. ', '.$state.' '.$zip . '<br>';} ?>
+        <?php if($phone) {echo $phone;} ?>
 			</div>
 			<div class="widget">
 				<h2>Charlotte Map</h2>
