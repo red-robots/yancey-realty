@@ -4,7 +4,7 @@
  */
 
 get_header(); ?>
-<div id="content-wrap">
+<div id="content-wrap" class="grey-bg">
 	<div class="wrapper">
 		<div id="primary" class="content-area-full">
 			<main id="main" class="site-main" role="main">
@@ -32,46 +32,39 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div>
+
+
+ <?php
+    $wp_query = new WP_Query();
+    $wp_query->query(array(
+    'post_type'=>'subdivision',
+    'posts_per_page' => -1,
+  ));
+  if ($wp_query->have_posts()) : ?>
+  <section class="image-gallery-block">
+    <div class="wrapper">
+      <div class="gallery-inner">
+        <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+          <div class="gallery-item fadeIn wow">
+            <a class="inside" href="<?php echo get_permalink(); ?>">
+              <figure class="<?php echo ( has_post_thumbnail() ) ? 'has-photo':'no-photo'; ?>">
+                <?php if ( has_post_thumbnail() ) { ?>
+                  <span class="image"><?php echo the_post_thumbnail(); ?></span>
+                <?php } ?>
+                <img src="<?php echo get_template_directory_uri() ?>/images/resizer-landscape.png" alt="" class="resizer" aria-hidden="true" />
+              </figure>
+              <div class="gallery-info">
+                <h3><?php the_title() ?></h3>
+              </div>
+            </a>
+          </div>
+        <?php endwhile; wp_reset_postdata(); ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
 </div>
-
-<?php
-	$wp_query = new WP_Query();
-	$wp_query->query(array(
-	'post_type'=>'subdivision',
-	'posts_per_page' => -1,
-	// 'paged' => $paged,
-));
-	if ($wp_query->have_posts()) : ?>
-    
-    <section class="developments grey-bg">
-    	<div class="wrapper">
-        	<div class="development-flex">
-        		<?php while ($wp_query->have_posts()) : $wp_query->the_post();
-			    	
-			    	$agent = get_field('agent');
-			    	$form_chooser = get_field('form_chooser');
-			    	$floor_plans = get_field('floor_plans');
-
-			    	// echo '<pre>';
-			    	// print_r($agent);
-			    	// echo '</pre>';
-
-			    ?>
-
-				    <div class="development ">
-				    <h2><?php the_title(); ?></h2>
-				    	<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
-				    		
-				    		<?php //the_excerpt(); ?>
-				    		<div class="more">
-				    			<a href="<?php the_permalink(); ?>">Go</a>
-				    		</div>
-				    </div>
-			<?php endwhile; ?>
-			</div>
-		</div>
-	</section>
-<?php endif; ?>
 <?php
 // get_sidebar();
 get_footer();
