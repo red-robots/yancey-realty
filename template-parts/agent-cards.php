@@ -54,7 +54,7 @@
               <img src="<?php echo $photo['url'] ?>" alt="<?php echo $photo['title'] ?>" class="photo">
             </span>
             <?php } ?>
-            <img src="<?php echo get_template_directory_uri() ?>/images/resizer.png" alt="" aria-hidden="true" />
+            <img src="<?php echo get_template_directory_uri() ?>/images/resizer.png" alt="" aria-hidden="true" class="resizer" />
         	</figure>
         </a>
       	<div class="agent-info">
