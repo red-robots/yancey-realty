@@ -200,6 +200,11 @@ header#masthead {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      img {
+        display: none;
+        width: 100%;
+        height: auto;
+      }
     }
   }
   &.full {
@@ -238,6 +243,18 @@ header#masthead {
     text-decoration: none;
     &:hover, &:focus {
       background: $secondary;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .imageCol, .textCol {
+      width: 100%!important;
+    }
+    .imageCol figure {
+      background-image: none!important;
+      img {
+        display: block;
+      }
     }
   }
 }

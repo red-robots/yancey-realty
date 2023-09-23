@@ -47,7 +47,11 @@ get_header(); ?>
     <div class="contentRow">
 
       <?php if($image_block) { ?>
-      <div class="imageCol"><figure style="background-image:url('<?php echo $image_block['url']?>')"></figure></div>
+      <div class="imageCol">
+        <figure style="background-image:url('<?php echo $image_block['url']?>')">
+          <img src="<?php echo $image_block['url'] ?>" alt="<?php echo $image_block['title'] ?>">
+        </figure>
+      </div>
       <?php } ?>
 
       <?php if($text_block) { ?>
