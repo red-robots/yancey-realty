@@ -498,6 +498,71 @@ header#masthead {
   height: auto;
 }
 
+section.resources {
+  padding: 10px 0 40px;
+}
+
+.topBlockSearch {
+  position: relative;
+}
+
+body.page-id-26 {
+  .searchByDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    .inner {
+      display: flex;
+      background: #FFF;
+      border: 1px solid #b5b5b5;
+      border-radius: 0;
+      overflow: hidden;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid #5c5c5c;
+        border-bottom: 1px solid #5c5c5c;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        transform: rotate(45deg);
+      }
+    }
+    span {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      padding: 10px 12px;
+      background: #9c9c9c;
+      color: #FFF;
+    }
+    select {
+      width: 150px;
+      border: none;
+      outline: none;
+      padding: 0 15px !important;
+      height: 40px;
+    }
+  }
+  @media screen and (max-width:1200px) {
+    .searchByDiv {
+      position: relative;
+      width: 100%;
+      float: left;
+      margin-bottom: 30px;
+      .inner {
+        max-width: 480px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 599px) {
 	ul#primary-menu > li {
 		margin-top: 1px;
