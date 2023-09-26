@@ -190,6 +190,12 @@ header#masthead {
   .textCol p:last-child {
     margin-bottom: 0;
   }
+  .textCol * {
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
   .imageCol {
     min-height: 15em;
     background-color: #000;
