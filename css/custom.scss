@@ -177,6 +177,12 @@ header#masthead {
     left: 0;
     animation: zoom-in-zoom-out 40s ease-in-out infinite;
   }
+  *, h2.tagline {
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
 }
 
 .home-featured-block {
