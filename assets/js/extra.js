@@ -14,4 +14,20 @@ jQuery(document).ready(function ($) {
 			$('#SEARCH-FORM input.search-field').focus();
 		});
 
+
+    adjustGalleryBlock();
+    $(window).on('resize orientationchange', function(){
+      adjustGalleryBlock();
+    });
+    function adjustGalleryBlock() {
+      if( $('.gallery-item').length ) {
+        $('.gallery-item').each(function(){
+          var galleryHeight = $(this).find('.inside').height();
+          var imageHeight = $(this).find('figure').height();
+          var contentBottom = galleryHeight - imageHeight;
+          $(this).find('.gallery-info').css('height',contentBottom+'px');
+        });
+      }
+    }
+
 });
