@@ -492,6 +492,12 @@ header#masthead {
   }
 }
 
+
+.resource-card .clogo img {
+  width: 140px;
+  height: auto;
+}
+
 @media screen and (max-width: 599px) {
 	ul#primary-menu > li {
 		margin-top: 1px;
