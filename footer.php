@@ -77,12 +77,12 @@ $phoneT = get_field('main_phone_2', 'option');
 					</div>
 				</div>
 				<div class="col">
-					
+
 				</div>
 				<div class="col">
-					&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?> 
+					&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?>
 				</div>
-				
+
 			</div><!-- .site-info -->
 
 			<?php $name = get_bloginfo('name'); ?>
@@ -96,6 +96,9 @@ $phoneT = get_field('main_phone_2', 'option');
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script>
+var phoneNum='<?php echo $phone?>';
+$('<li class="call-icon"><a href="tel:'+phoneNum+'" aria-label="'+phoneNum+'" class="callusIcon"><i class="fa fa-solid fa-phone"></i></a></li>').appendTo('.site-header #primary-menu');
+</script>
 </body>
 </html>

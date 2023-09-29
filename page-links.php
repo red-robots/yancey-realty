@@ -13,7 +13,7 @@ get_header(); ?>
 	<div class="wrapper">
 		<div id="primary" class="content-area-full">
 			<main id="main" class="site-main" role="main">
-				
+
 
 				<?php
 				while ( have_posts() ) : the_post(); ?>
@@ -27,35 +27,38 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 
-					
+
 				</article><!-- #post-## -->
 
 				<?php endwhile; // End of the loop. ?>
 
 				<section class="resources">
-					
+
 					<?php $args = array(
 			                'post_type'     => 'useful_link',
 			                'posts_per_page' => -1,
-			            );    
+			            );
 
 				            $the_query = new WP_Query( $args );
 
 				            if ( $the_query->have_posts() ) : ?>
 				                <section class="resources">
-				                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
+				                <?php while ( $the_query->have_posts() ) : $the_query->the_post();
 				                	$info=get_field('contact_info');
-									$website=get_field('website');
-									?>
+													$website=get_field('website');
+													$siteLink = ($website) ? $website : '#';
+													$target = ($website) ? '_blank' : '_self';
+													?>
 				                    <div class="resource-card">
-				                    	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+				                    	<!-- <h4><a href="<?php //the_permalink(); ?>"><?php the_title(); ?></a></h4> -->
+															<h4><a href="<?php echo $siteLink; ?>" target="<?php echo $target; ?>"><?php the_title(); ?></a></h4>
 				                    	<?php if($info) { ?>
 											<div class="item bump">
 												<div class="title"></div><br>
 												<?php echo $info; ?>
 											</div>
 										<?php } ?>
-			
+
 									<?php if($website) { ?>
 				                    	<div class="more">
 				                    		<a href="<?php echo $website; ?>" target="_blank">Visit Website</a>
@@ -69,11 +72,11 @@ get_header(); ?>
 				                </section>
 				           <?php endif;
 				            wp_reset_postdata(); ?>
-				       
-				  
+
+
 
 				</section>
-				
+
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div>

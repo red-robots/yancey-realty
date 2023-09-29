@@ -4,6 +4,15 @@ $secondary: #5d8db5;
 a, input, button, textarea, select {
 	transition: all ease .3s;
 }
+body.no-tool-bar {
+	header#masthead {
+		padding-top: 0!important;
+		.logo img {
+			position: relative;
+			top: 5px;
+		}
+	}
+}
 ul#primary-menu > li {
 	position: relative;
 }
@@ -52,15 +61,15 @@ ul#primary-menu > li.menu-item-has-children:hover > ul {
 
 ul#primary-menu li > a[href="#search"] {
 	position: relative;
-	width: 60px;
+	width: 50px;
 	overflow: hidden;
-	padding: 0 20px;
+	padding: 0 20px!important;
 	text-indent: -95px;
 	color: transparent;
 	i {
 		position: absolute;
     top: 14px;
-    left: 20px;
+    left: 16px;
     text-indent: 0;
     font-size: 18px;
 		color: #FFF;
@@ -516,6 +525,26 @@ section.resources {
 
 .topBlockSearch {
   position: relative;
+}
+ul#primary-menu li.call-icon {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.callusIcon {
+	width: 50px;
+	display: flex!important;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	font-size: 22px;
+	line-height: 1;
+	padding-left: 5px!important;
+	padding-right: 5px!important;
+}
+
+.main-navigation {
+	padding-right: 0;
 }
 
 body.page-id-26 {

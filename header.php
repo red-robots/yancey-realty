@@ -37,12 +37,15 @@ $zipT = get_field('zip_2', 'option');
 // $email = get_field('general_email', 'option');
 $phoneT = get_field('main_phone_2', 'option');
 
+$show_tool_bar = false;
+$has_tool_bar = ($show_tool_bar) ? 'has-tool-bar':'no-tool-bar';
 ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class($has_tool_bar); ?>>
 <div id="page" class="site">
 
+<?php if($show_tool_bar) { ?>
 <div class="toolbar">
 	<div class="wrapper-nopad ">
 		<div class="tool-flex">
@@ -57,6 +60,7 @@ $phoneT = get_field('main_phone_2', 'option');
 		</div>
 	</div>
 </div>
+<?php } ?>
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
