@@ -153,6 +153,47 @@ header#masthead {
 		display: block;
 		animation-name: dropDownAnimation;
 	}
+
+	.idx-omnibar-form,
+	.widget {
+		padding: 0 0!important;
+		margin: 0 0!important;
+	}
+	
+	.idx-omnibar-form {
+		position: relative;
+		::placeholder {
+			color: #FFF!important;
+		}
+		.awesomplete {
+			width: 100%!important;
+		}
+		[type="submit"] {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2;
+			background-color: transparent!important;
+			border: none!important;
+			color: #CCC!important;
+			width: 50px;
+			font-size: 18px;
+		}
+		[data-lastpass-icon-root] {
+			display:none!important;
+		}
+		#omnibar {
+			background-color: #33393f;
+			border: 1px solid #FFF;
+			border-radius: 100px;
+			padding: 5px 50px 5px 20px;
+			color: #FFF!important;
+			&:focus {
+				outline: none;
+				box-shadow: 0 2px 5px rgba(0,0,0,.18);
+			}
+		}
+	}
 }
 
 @keyframes dropDownAnimation {

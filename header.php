@@ -91,16 +91,19 @@ $has_tool_bar = ($show_tool_bar) ? 'has-tool-bar':'no-tool-bar';
 
 	        </section>
 		</div><!-- wrapper -->
-
+		
+		<?php if ( is_active_sidebar( 'sidebar-search' ) ) { ?>
 		<div id="SEARCH-FORM" class="siteSearchForm">
 			<div class="search-form-wrap">
-				<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<!-- <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<label for="search"><?php _e( 'Search&hellip;', 'acstarter' ); ?></label>
 					<input type="search" id="search" class="search-field" value="<?php echo get_search_query(); ?>" name="s" placeholder="Search here..." />
 					<button type="submit" class="search-submit" aria-label="Submit Search"><i class="fa fa-search"></i></button>
-				</form>
+				</form> -->
+				<?php dynamic_sidebar( 'sidebar-search' ); ?>
 			</div>
 		</div>
+		<?php } ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content ">
