@@ -10,7 +10,7 @@ function acstarter_scripts() {
 		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', false, '1.10.2', true);
 		wp_enqueue_script('jquery');
 
-	wp_register_style( 'acstarter-custom-style', get_template_directory_uri().'/css/custom.css' );
+	wp_register_style( 'acstarter-custom-style', get_template_directory_uri().'/css/custom.css?v=2.0' );
 	wp_enqueue_style( 'acstarter-custom-style' );
 
 	wp_enqueue_script(
