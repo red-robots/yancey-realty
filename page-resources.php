@@ -76,13 +76,19 @@ get_header(); ?>
   									$state=get_field('state');
   									$zip=get_field('zip');
   									$website=get_field('website');
+                    $target = ($website) ? '_blank' : '_self';
   									$license=get_field('license');
   									//$desc=get_field('company_description');
   									$logo=get_field('logo');
+                          
 
   									?>
               <div class="resource-card">
-              	<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                <?php if ($website) { ?>
+                  <h4><a href="<?php echo $website; ?>" target="<?php echo $target; ?>"><?php the_title(); ?></a></h4>
+                <?php } else { ?>
+                  <h4><a href="javascript:void(0)"><?php the_title(); ?></a></h4>
+                <?php } ?>
 
               	<?php if($logo) { ?>
   					<div class="clogo">
