@@ -8,6 +8,20 @@
  *
  * @package ACStarter
  */
+$socialMediaLinks = array();
+$socialMedia = array('facebook','linkedin','twitter','instagram');
+$socialMediaArrs['facebook'] = 'fa fa-facebook';
+$socialMediaArrs['linkedin'] = 'fa fa-linkedin';
+$socialMediaArrs['twitter'] = 'fa fa-twitter';
+$socialMediaArrs['instagram'] = 'fa fa-instagram';
+
+foreach($socialMediaArrs as $k=>$icon) {
+  if( $link = get_field($k.'_link','option') ) {
+    $socialMediaLinks[] = array('link'=>$link,'name'=>$k,'icon'=>$icon);
+  }
+}
+
+
 $linkedin = get_field('linkedin_link', 'option');
 $facebook = get_field('facebook_link', 'option');
 $twitter = get_field('twitter_link', 'option');
@@ -33,38 +47,6 @@ $phoneT = get_field('main_phone_2', 'option');
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper center">
-		<section class="social">
-			<ul class="footer-social">
-				<?php if($facebook) { ?>
-	    			<li>
-		    			<a target="_blank" href="<?php echo $facebook; ?>">
-		    				<i class="fa fa-facebook" aria-hidden="true"></i>
-		    			</a>
-	    			</li>
-	    		<?php } ?>
-	    		<?php if($linkedin) { ?>
-	    			<li>
-		    			<a target="_blank" href="<?php echo $linkedin; ?>">
-		    				<i class="fa fa-linkedin" aria-hidden="true"></i>
-		    			</a>
-	    			</li>
-	    		<?php } ?>
-	    		<?php if($twitter) { ?>
-	    			<li>
-		    			<a target="_blank" href="<?php echo $twitter; ?>">
-		    				<i class="fa fa-twitter" aria-hidden="true"></i>
-		    			</a>
-	    			</li>
-	    		<?php } ?>
-	    		<?php if($instagram) { ?>
-	    			<li>
-		    			<a target="_blank" href="<?php echo $instagram; ?>">
-		    				<i class="fa fa-instagram" aria-hidden="true"></i>
-		    			</a>
-	    			</li>
-	    		<?php } ?>
-			</ul>
-		</section>
 			<div class="site-info">
 				<div class="col">
 					<div class="foot-add">
@@ -76,12 +58,15 @@ $phoneT = get_field('main_phone_2', 'option');
 						<?php if($cityT) {echo $cityT. ', '.$stateT.' '.$zipT;} ?>
 					</div>
 				</div>
-				<div class="col">
 
-				</div>
-				<div class="col">
-					&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?>
-				</div>
+        <?php if ($socialMediaLinks) { ?>
+        <div class="col footerSocialMedia">
+          <?php foreach ($socialMediaLinks as $a) { ?>
+            <a href="<?php echo $a['link'] ?>" aria-label="<?php echo $a['name'] ?>"><i class="<?php echo $a['icon'] ?>" aria-hidden="true"></i></a>
+          <?php } ?>
+        </div>
+        <?php } ?>
+			
 
 			</div><!-- .site-info -->
 

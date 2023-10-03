@@ -698,6 +698,19 @@ body.page-id-26 {
   }
 }
 
+.footerSocialMedia {
+  a {;
+    transition: all ease 0.4s;
+    font-size: 1.8em;
+    color: #ccc;
+    display: inline-block;
+    margin-left: 18px;
+    &:hover, &:focus {
+      color: #e31d1a;
+    }
+  }
+}
+
 @media screen and (max-width: 599px) {
 	ul#primary-menu > li {
 		margin-top: 1px;
@@ -724,4 +737,18 @@ body.page-id-26 {
 			transform: translateX(-50%);
 		}
 	}
+  .site-info {
+    display: flex;
+    flex-wrap: wrap;
+    .col {
+      width: 100%;
+    }
+    .footerSocialMedia {
+      margin-top: 10px;
+      a {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+  }
 }
