@@ -96,9 +96,28 @@ $phoneT = get_field('main_phone_2', 'option');
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<?php
+$contact_numbers = get_field('contact_numbers','option');
+$phoneList = '';
+if($contact_numbers) {
+  foreach($contact_numbers as $c) {
+    $name = $c['name'];
+    $phone = $c['phone'];
+    if( $name && $phone ) {
+      $phone = preg_replace('/\s+/', ' ', $phone);
+      $phoneList .= '<div class="contact"><a href="tel:'.$phone.'" title="'.$phone.'">'.$name.'</a></div>';
+    }
+  }
+}
+$contacts = ($phoneList) ? '<div class="phonePopUp">'.$phoneList.'</div>':'';
+
+?>
 <script>
 var phoneNum='<?php echo $phone?>';
-$('<li class="call-icon"><a href="tel:'+phoneNum+'" aria-label="'+phoneNum+'" class="callusIcon"><i class="fa fa-solid fa-phone"></i></a></li>').appendTo('.site-header #primary-menu');
+var contactNum='<?php echo $contacts?>';
+
+// $('<li class="call-icon"><a href="tel:'+phoneNum+'" aria-label="'+phoneNum+'" class="callusIcon"><i class="fa fa-solid fa-phone"></i></a></li>').appendTo('.site-header #primary-menu');
+$('<li class="call-icon"><a href="javascript:void(0)" id="contactNums" aria-label="'+phoneNum+'" class="callusIcon"><i class="fa fa-solid fa-phone"></i></a>'+contactNum+'</li>').appendTo('.site-header #primary-menu');
 </script>
 </body>
 </html>

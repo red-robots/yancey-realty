@@ -571,6 +571,36 @@ ul#primary-menu li.call-icon {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+  position: relative;
+  .phonePopUp {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 150px;
+    background: #000;
+    padding: 10px 0;
+    color: #FFF;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-bottom: 12px solid #000;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      position: absolute;
+      top: -11px;
+      right: 18px;
+    }
+    a {
+      padding: 10px 15px!important;
+      text-align: left;
+      text-transform: uppercase;
+      line-height: 1.2;
+      font-size: 16px;
+    }
+  }
 }
 .callusIcon {
 	width: 50px;

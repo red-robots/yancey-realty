@@ -5,6 +5,12 @@
  */
 jQuery(document).ready(function ($) {
 
+    $(document).on('click','#contactNums', function(e){
+      e.preventDefault();
+      $(this).toggleClass('show-numbers');
+      $('.phonePopUp').toggleClass('show-numbers');
+      $('.phonePopUp').slideToggle();
+    });
 
 		$(document).on('click','ul#primary-menu a[href="#search"]', function(e){
 			e.preventDefault();
