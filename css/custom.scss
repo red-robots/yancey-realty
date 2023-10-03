@@ -595,6 +595,11 @@ ul#primary-menu li.call-icon {
       position: absolute;
       top: -11px;
       right: 18px;
+      @media screen and (max-width: 768px) {
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
     a {
       padding: 10px 15px!important;
