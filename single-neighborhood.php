@@ -205,7 +205,27 @@ wp_reset_postdata();
 			    		<?php } ?>
 			    	</ul>
 			    <?php endif; ?>
-	    	<div class="more"><a href="<?php the_permalink(); ?>">Agent Info</a></div>
+			    <?php 
+			    $permalink = get_permalink();
+		        $agents_url = get_bloginfo('url') . '/agent/';
+		        // Remove the trailing slash if it exists
+		        $clean_url = rtrim($permalink, '/');
+
+		        // Extract everything after the base URL
+		        $path = str_replace($agents_url, "", $clean_url);
+
+		        // Replace hyphens with spaces
+		        $path = str_replace('-', ' ', $path);
+
+		        // Capitalize the first and last name
+		        $path = ucwords($path);
+
+		        // Replace spaces with %20 for URL encoding
+		        $path = str_replace(' ', '%20', $path);
+
+		        $agent_link = $permalink . '?agents=' . $path;
+			     ?>
+	    	<div class="more"><a href="<?php echo $agent_link; ?>">Agent Info</a></div>
     	</div>
     	<?php endforeach; wp_reset_postdata(); 
     	endif;?>

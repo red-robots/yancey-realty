@@ -21,6 +21,25 @@
     <div class="contentRow">
       <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
 
+        $permalink = get_permalink();
+        $agents_url = get_bloginfo('url') . '/agent/';
+        // Remove the trailing slash if it exists
+        $clean_url = rtrim($permalink, '/');
+
+        // Extract everything after the base URL
+        $path = str_replace($agents_url, "", $clean_url);
+
+        // Replace hyphens with spaces
+        $path = str_replace('-', ' ', $path);
+
+        // Capitalize the first and last name
+        $path = ucwords($path);
+
+        // Replace spaces with %20 for URL encoding
+        $path = str_replace(' ', '%20', $path);
+
+        $agent_link = $permalink . '?agents=' . $path;
+
       	$photo = get_field('picture');
       	$size = 'agent';
   		  //$thumb = $photo['sizes'][ $size ];
@@ -47,7 +66,7 @@
 
     <div class="agent">
       <div class="inside fadeIn wow">
-        <a href="<?php echo get_permalink() ?>" class="infolink">
+        <a href="<?php echo $agent_link; ?>" class="infolink">
         	<figure class="agent-photo <?php echo ($photo) ? 'has-photo':'no-photo' ?>">
             <?php if ($photo) { ?>
             <span class="headshot">
